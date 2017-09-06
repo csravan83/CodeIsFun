@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   get 'divisions/show'
 
+  post 'divisions/show'
+
   get 'sites/index'
 
 

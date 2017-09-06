@@ -14,8 +14,22 @@
   </head>
 <body>
 
-<%= @zero %>
+<div>
+  <%= form_tag do %>
+      <%= number_field_tag "number1" ,nil,min: 0 %>
+      / <%= number_field_tag "number2" ,nil,min:0 %>
+      <%= submit_tag "submit" , :action => @show %>
+  <% end %>
+  <br>
+  <p>Total : <%= @show %></p>
+
+  <p><%= @msg%> <%= @name%> <%= @btrace%></p>
+
+
+</div>
+
 
 </body>
+
 <%= render 'sites/footer' %>
 </html>

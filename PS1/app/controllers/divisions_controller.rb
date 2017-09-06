@@ -3,18 +3,19 @@ class DivisionsController < ApplicationController
 
 
   def show
+    @number1 = params[:number1].to_i
+    @number2 = params[:number2].to_i
 
-      begin
-        1/0
-      rescue ZeroDivisionError => e
-        @zero = e.class.name
-        puts "Exception Class: #{ e.class.name }"
-        puts "Exception Message: #{ e.message }"
-        puts "Exception Backtrace: #{ e.backtrace }"
-        logger.error "About to divide by 0 !!!"
-      end
+
+    begin
+      @show = @number1 / @number2
+    rescue ZeroDivisionError => e
+      @msg = e.message
+      @name = e.class.name
+      @btrace = e.backtrace
+      logger.error "About to divide by 0 !!!"
+    end
 
   end
 
 end
-
