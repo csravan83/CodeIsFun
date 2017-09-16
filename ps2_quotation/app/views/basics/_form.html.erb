@@ -18,7 +18,8 @@
 
       <div class="form_row">
         <%= form.label :category %>
-        <%= form.text_field :category, :size => 20, :maxlength => 40 %>
+        <%= form.select :category, options_for_select(Quotation.all.map {|c| [ c.category ]}.uniq,   "Select Category"),:prompt => "Select Category",:required => true %>
+        
       </div>
 
       <div class="form_row">
@@ -27,12 +28,10 @@
       </div>
     </fieldset>
 
-
     <p>
     <div class="form_row">
       <%= form.submit 'Create' %>
     </div>
     </p>
-
 
 <% end %>
