@@ -2,12 +2,18 @@ class BasicsController < ApplicationController
 
   def quotations
 
+    data = Array.new
+
     # XML and Json format
     @quotation = Quotation.all
     respond_to do |format|
       format.html
       format.json { render json: @quotation }
-      format.xml { render xml: @quotation }
+      @quotation.each do |q|
+        data << {:author_name=> q.author_name,:category=>q.category,:quote=>q.quote}
+
+      end
+      format.xml { render xml: data }
     end
 
 
