@@ -1,0 +1,24 @@
+<h3>Search</h3>
+
+<%= form_tag(basics_findauthor_path, :method => "get", id: "search-quotes")  do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search for quote or author name" %>
+    <%= submit_tag "Search", :author_name => nil %>
+<% end %>
+
+
+<% if @results.blank? %>
+    <h4>There are no Results containing the term <%= params[:search] %>.</h4>
+<% else %>
+    <table>
+      <tbody>
+      <% @results.each do |result| %>
+          <tr>
+            <td><%= result.quote %> </td>
+            <td> -<%= result.author_name %></td>
+          </tr>
+      <% end %>
+    </tbody>
+    </table>
+<% end %>
+
+<%= link_to "Back", basics_quotations_path %>

@@ -1,0 +1,30 @@
+<h3>Quotations</h3>
+
+<%= link_to "Search", basics_findauthor_path %>
+
+<ul>
+  <% for quotation in @quotations %>
+      <li>
+        <%= quotation.author_name %>: <%= quotation.quote %>
+        <%= link_to 'Delete', action: 'destroy', author_name: quotation.author_name,:confirm => "Are you sure?" , :method => :delete  %>
+
+      </li>
+  <% end %>
+</ul>
+
+<br/>
+
+<% if params[:sort_by] == "date" %>
+    <%= link_to "Sort by category", :action => :quotations, :sort_by => :category %>
+<% else %>
+    <%= link_to "Sort by date", :action => :quotations, :sort_by => :date %>
+<% end %>
+<br/>
+<%= link_to "Export to XML", "http://localhost:3000/basics/quotations.xml"%>
+<%= link_to "Export to JSON", "http://localhost:3000/basics/quotations.json"%>
+
+
+<br/>
+<%= render 'form', quotation: @quotation %>
+
+<hr/>
