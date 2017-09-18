@@ -1,0 +1,16 @@
+
+<h3>Search Author Name</h3>
+
+<%= form_for @quotation, :url => { :action => :search } do |form| %>
+    <%= form.text_field :author_name %>
+    <%= form.submit 'Search'  %>
+<% end %>
+
+<ul>
+  <% for quotation in @quotations %>
+      <li>
+        <%= h quotation.author_name %>: <%= h quotation.quote %>
+        <%= link_to 'Delete', action: 'destroy', author_name: quotation.author_name, method: :delete, data: { confirm: 'Are you sure?' }%>
+      </li>
+  <% end %>
+</ul>

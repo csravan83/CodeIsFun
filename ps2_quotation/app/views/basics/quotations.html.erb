@@ -1,16 +1,26 @@
 <h3>Quotations</h3>
+
+<%= link_to "Search", :action => :findauthor %>
+
 <ul>
   <% for quotation in @quotations %>
-      <li><%= h quotation.author_name %>: <%= h quotation.quote %></li>
+      <li>
+        <%= h quotation.author_name %>: <%= h quotation.quote %>
+        <%= link_to 'Delete', action: 'destroy', author_name: quotation.author_name, method: :delete, data: { confirm: 'Are you sure?' }%>
+      </li>
   <% end %>
 </ul>
+
 <br/>
+
 <% if params[:sort_by] == "date" %>
     <%= link_to "Sort by category", :action => :quotations, :sort_by => :category %>
 <% else %>
     <%= link_to "Sort by date", :action => :quotations, :sort_by => :date %>
 <% end %>
 
+<%= link_to "Export to XML", :action => :export, :act => :xml %>
+<%= link_to "Export to JSON", :action => :export, :act => :json %>
 <%= render 'form', quotation: @quotation %>
 
 <hr/>
