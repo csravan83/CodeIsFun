@@ -1,0 +1,41 @@
+
+<h3>New quotation</h3>
+
+
+<%= form_for @quotation, :url => { :action => :quotations } do |form| %>
+
+
+    <% @quotation.errors.full_messages.each do |msg| %>
+        <p><%= msg %></p>
+    <% end %>
+
+    <fieldset>
+      <div class="form_row">
+        <%= form.label :category %>
+        <%if @field == 1 %>
+            <%= form.text_field :category, :size => 20, :maxlength => 40 %>
+            <%= link_to "Old Category", :action => :quotations, :newcate => :selectf %>
+        <%else%>
+            <%= form.select :category, options_for_select(Quotation.all.map {|c| [ c.category ]}.uniq,   "Select Category"),:prompt => "Select Category",:required => true%>
+            <%= link_to "New Category", :action => :quotations, :newcate => :textf %>
+        <%end%>
+      </div>
+      <legend>Enter details</legend>
+      <div class="form_row">
+        <%= form.label :author_name %>
+        <%= form.text_field :author_name, :size => 20, :maxlength => 40 %>
+      </div>
+
+      <div class="form_row">
+        <%= form.label :quote %>
+        <%= form.text_area :quote, :rows => 2, :cols => 40, :maxlength => 500 %>
+      </div>
+    </fieldset>
+
+    <p>
+    <div class="form_row">
+      <%= form.submit 'Create' %>
+    </div>
+    </p>
+
+<% end %>
