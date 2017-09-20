@@ -5,6 +5,7 @@ class Quotation < ApplicationRecord
 
 
   def self.search(search)
+    # where(' author_name ILIKE ? OR quote ILIKE ? AND id NOT IN (?)', "%#{search}%", "%#{search}%" , list )
     where('author_name ILIKE ? OR quote ILIKE ?', "%#{search}%", "%#{search}%")
   end
 

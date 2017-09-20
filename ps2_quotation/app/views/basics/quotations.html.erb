@@ -1,13 +1,13 @@
 <h3>Quotations</h3>
-
+<%=@show%>
 <%= link_to "Search", basics_findauthor_path %>
 
 <ul>
+  <%= link_to 'Erase My Personalization', action: :quotations ,:erase => "yes"%>
   <% for quotation in @quotations %>
       <li>
         <%= quotation.author_name %>: <%= quotation.quote %>
-        <%= link_to 'Delete', action: 'destroy', author_name: quotation.author_name,:confirm => "Are you sure?" , :method => :delete  %>
-        <%= link_to 'Kill', action: 'destroy' %>
+        <%= link_to 'Kill', action: 'destroy' , id: quotation.id %>
       </li>
   <% end %>
 </ul>
@@ -21,10 +21,11 @@
 <% end %>
 
 <br/>
-<%= link_to "Export to XML", "http://localhost:3000/basics/quotations.xml"%>
-<%= link_to "Export to JSON", "http://localhost:3000/basics/quotations.json"%>
+<hr/>
+<%= link_to "Export to XML",  :action => :quotations , :format => "xml"%>
+<%= link_to "Export to JSON", :action => :quotations , :format => "json"%>
 <%= link_to "Import the quotations", :action => :import %>
-<br/>
+<hr/>
 
 <%= render 'form', quotation: @quotation %>
 

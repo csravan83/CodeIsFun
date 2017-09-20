@@ -1,19 +1,29 @@
 class BasicsController < ApplicationController
+
   require 'rake'
   require 'open-uri'
   require 'nokogiri'
 
+  list = Array.new
+
   def quotations
+
     # XML and Json format
     data = Array.new
     @quotation = Quotation.all
     respond_to do |format|
-      format.html
-      format.json { render json: @quotation }
-      @quotation.each do |q|
-        data << {:author_name=> q.author_name,:category=>q.category,:quote=>q.quote}
+
+      if params[:format] == "json"
+        format.json { render json: @quotation }
+      elsif params[:format] == "xml"
+        @quotation.each do |q|
+          data << {:author_name=>q.author_name,:category=>q.category,:quote=>q.quote,:created_at=>q.created_at,:updated_at=>q.updated_at}
+        end
+        format.xml { render xml: data.to_xml(:root => 'quotations', :children => 'quotation', skip_types: true, :dasherize => false) }
+      else
+        format.html
       end
-      format.xml { render xml: data }
+
     end
     # create new quotation
     if params[:quotation]
@@ -28,12 +38,25 @@ class BasicsController < ApplicationController
       @quotation = Quotation.new
     end
 
+    # cookies list
+
+    if cookies[:selectq] != nil
+      list = cookies[:selectq].split(' ').collect! {|n| n.to_i}
+      @showlist = list
+    end
     # sort by date or category
     if params[:sort_by] == "date"
-      @quotations = Quotation.order(:created_at)
+      @quotations = Quotation.where.not(id: list).order(:created_at)
     else
-      @quotations = Quotation.order(:category)
+      @quotations = Quotation.where.not(id: list).order(:category)
     end
+
+    if params[:erase] == "yes"
+      cookies.delete(:selectq)
+      @quotations = Quotation.order(:created_at)
+    end
+
+
 
     # New Category and Old Category input field
     case params[:newcate]
@@ -49,9 +72,9 @@ class BasicsController < ApplicationController
   def quotation_params
     params.require(:quotation).permit(:author_name, :category, :quote)
   end
+
+
   # export xml file
-
-
   def export
     @quotation = Quotation.all
     respond_to do |format|
@@ -63,16 +86,25 @@ class BasicsController < ApplicationController
 
   # delete data
   def destroy
-    Quotation.find_by(author_name: params[:author_name]).destroy
+    # Quotation.find_by(author_name: params[:author_name]).destroy
+    cookies[:selectq] = '' if cookies[:selectq].nil?
+    cookies[:selectq] = cookies[:selectq] + ' ' + params[:id]
     redirect_to basics_quotations_path
+
   end
+
+
 
   # search author_name
   def findauthor
+    if cookies[:selectq] != nil
+      list = cookies[:selectq].split(' ').collect! {|n| n.to_i}
+    end
     if params[:search]
       @results = Quotation.search(params[:search])
+      @results = @results.where.not(id: list)
     else
-      @results = Quotation.all
+      @results = Quotation.where.not(id: list)
     end
   end
 

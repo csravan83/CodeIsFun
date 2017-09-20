@@ -1,4 +1,5 @@
 <h3>Search</h3>
+<%= @show%>
 
 <%= form_tag(basics_findauthor_path, :method => "get", id: "search-quotes")  do %>
     <%= text_field_tag :search, params[:search], placeholder: "Search for quote or author name" %>
@@ -13,8 +14,8 @@
       <tbody>
       <% @results.each do |result| %>
           <tr>
+            <td><%= result.author_name %> : </td>
             <td><%= result.quote %> </td>
-            <td> -<%= result.author_name %></td>
           </tr>
       <% end %>
     </tbody>
