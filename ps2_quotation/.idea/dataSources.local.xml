@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails ps2_quotation: development" uuid="a6efbdb2-db8c-4a70-bed0-51e18efc8211">
+      <database-info product="PostgreSQL" version="9.5.7" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>sravan</user-name>
+      <introspection-schemas>ps2_quotation_development:public</introspection-schemas>
+    </data-source>
+    <data-source name="Rails ps2_quotation: test" uuid="cede62eb-9b9c-4b6e-9dd2-250c21a97677">
+      <database-info product="PostgreSQL" version="9.5.7" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>sravan</user-name>
+      <introspection-schemas>ps2_quotation_test:public</introspection-schemas>
+    </data-source>
+    <data-source name="Rails ps2_quotation: production" uuid="37f1fc41-0694-4134-987b-c7de899c9048">
+      <database-info product="PostgreSQL" version="9.5.7" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>sravan</user-name>
+      <introspection-schemas>ps2_quotation_production:public</introspection-schemas>
+    </data-source>
+  </component>
+</project>

@@ -39,7 +39,6 @@ class BasicsController < ApplicationController
     end
 
     # cookies list
-
     if cookies[:selectq] != nil
       list = cookies[:selectq].split(' ').collect! {|n| n.to_i}
       @showlist = list
@@ -70,7 +69,7 @@ class BasicsController < ApplicationController
   end
   # get parameter quotation
   def quotation_params
-    params.require(:quotation).permit(:author_name, :category, :quote)
+    params.require(:quotation).permit!
   end
 
 

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="Rails ps2_quotation: development" uuid="a6efbdb2-db8c-4a70-bed0-51e18efc8211">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:ps2_quotation_development</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails ps2_quotation: test" uuid="cede62eb-9b9c-4b6e-9dd2-250c21a97677">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:ps2_quotation_test</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails ps2_quotation: production" uuid="37f1fc41-0694-4134-987b-c7de899c9048">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:ps2_quotation_production</jdbc-url>
+    </data-source>
+  </component>
+</project>

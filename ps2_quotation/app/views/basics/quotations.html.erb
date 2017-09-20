@@ -3,7 +3,6 @@
 <%= link_to "Search", basics_findauthor_path %>
 
 <ul>
-  <%= link_to 'Erase My Personalization', action: :quotations ,:erase => "yes"%>
   <% for quotation in @quotations %>
       <li>
         <%= quotation.author_name %>: <%= quotation.quote %>
@@ -15,16 +14,16 @@
 <br/>
 
 <% if params[:sort_by] == "date" %>
-    <%= link_to "Sort by category", :action => :quotations, :sort_by => :category %>
+    <%= link_to "Sort by category", :action => :quotations, :sort_by => :category %> <br>
 <% else %>
-    <%= link_to "Sort by date", :action => :quotations, :sort_by => :date %>
+    <%= link_to "Sort by date", :action => :quotations, :sort_by => :date %> <br>
 <% end %>
-
+<%= link_to 'Erase My Personalization', action: :quotations ,:erase => "yes"%><br>
 <br/>
 <hr/>
-<%= link_to "Export to XML",  :action => :quotations , :format => "xml"%>
-<%= link_to "Export to JSON", :action => :quotations , :format => "json"%>
-<%= link_to "Import the quotations", :action => :import %>
+<%= link_to "Export to XML",  :action => :quotations , :format => "xml"%><br>
+<%= link_to "Export to JSON", :action => :quotations , :format => "json"%><br>
+<%= link_to "Import the quotations", :action => :import %><br>
 <hr/>
 
 <%= render 'form', quotation: @quotation %>
