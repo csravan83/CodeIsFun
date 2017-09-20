@@ -1,0 +1,12 @@
+<h3>Import the Quotations</h3>
+
+<%= form_tag "/basics"  do %>
+
+    <%= label_tag "import xml"%>
+    <br/>
+    <%= text_area_tag "import_xml"  %>
+    <%= submit_tag "submit" ,  :action => 'import' %>
+
+<% end %>
+
+<%= link_to "Back", basics_quotations_path %>

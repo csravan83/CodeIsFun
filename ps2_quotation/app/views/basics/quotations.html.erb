@@ -7,7 +7,7 @@
       <li>
         <%= quotation.author_name %>: <%= quotation.quote %>
         <%= link_to 'Delete', action: 'destroy', author_name: quotation.author_name,:confirm => "Are you sure?" , :method => :delete  %>
-
+        <%= link_to 'Kill', action: 'destroy' %>
       </li>
   <% end %>
 </ul>
@@ -19,12 +19,13 @@
 <% else %>
     <%= link_to "Sort by date", :action => :quotations, :sort_by => :date %>
 <% end %>
+
 <br/>
 <%= link_to "Export to XML", "http://localhost:3000/basics/quotations.xml"%>
 <%= link_to "Export to JSON", "http://localhost:3000/basics/quotations.json"%>
-
-
+<%= link_to "Import the quotations", :action => :import %>
 <br/>
+
 <%= render 'form', quotation: @quotation %>
 
 <hr/>

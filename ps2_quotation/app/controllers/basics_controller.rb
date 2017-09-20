@@ -1,4 +1,7 @@
 class BasicsController < ApplicationController
+  require 'rake'
+  require 'open-uri'
+  require 'nokogiri'
 
   def quotations
     # XML and Json format
@@ -47,6 +50,8 @@ class BasicsController < ApplicationController
     params.require(:quotation).permit(:author_name, :category, :quote)
   end
   # export xml file
+
+
   def export
     @quotation = Quotation.all
     respond_to do |format|
@@ -65,9 +70,25 @@ class BasicsController < ApplicationController
   # search author_name
   def findauthor
     if params[:search]
-      @results = Quotation.search(params[:search]).order("created_at DESC")
+      @results = Quotation.search(params[:search])
     else
-      @results = Quotation.all.order("Created_at DESC")
+      @results = Quotation.all
     end
   end
+
+  def import
+    doc = Nokogiri::XML(params[:import_xml])
+    doc.css('quotation').each do |f|
+      Quotation.create do |q|
+        q.author_name = f.css("author_name").first.text
+        q.category = f.css("category").first.text
+        q.quote = f.css("quote").first.text
+        q.created_at = f.css("created_at").first.text
+        q.updated_at = f.css("updated_at").first.text
+      end
+    end
+  end
+
+
+
 end
