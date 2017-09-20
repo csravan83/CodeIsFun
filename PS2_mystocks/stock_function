@@ -1,0 +1,29 @@
+CREATE OR REPLACE FUNCTION stock_value(string varchar)
+RETURNS integer as $$
+DECLARE
+ascii_value integer := 0;
+BEGIN
+FOR i in 1..length(string) loop
+ascii_value:= ascii_value + ascii(substr(string,i,1));
+END loop;
+RETURN ascii_value;
+END;
+$$LANGUAGE plpgsql;
+
+CREATE OR REPLACE FUNCTION portfolio_value() 
+RETURNS double precision AS $$
+DECLARE 
+aggregate_value double precision := 0;
+rec_rows RECORD;
+cur_portfolio CURSOR 
+FOR select my_stocks.symbol, n_shares as number_of_shares,price as price_per_share, price*n_shares as current_value from my_stocks join stock_prices on stock_prices.symbol = my_stocks.symbol; 
+BEGINOPEN cur_portfolio;
+LOOP 
+FETCH  cur_portfolio INTO rec_rows;
+EXIT WHEN NOT FOUND;
+aggregate_value := aggregate_value + rec_rows.current_value; 
+END LOOP;
+CLOSE cur_portfolio;
+return aggregate_value;
+end;
+$$ language plpgsql;
