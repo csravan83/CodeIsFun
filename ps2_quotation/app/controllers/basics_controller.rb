@@ -7,10 +7,12 @@ class BasicsController < ApplicationController
   list = Array.new
 
   def quotations
-
+    if cookies[:selectq] != nil
+      list = cookies[:selectq].split(' ').collect! {|n| n.to_i}
+    end
     # XML and Json format
     data = Array.new
-    @quotation = Quotation.all
+    @quotation = Quotation.where.not(id: list)
     respond_to do |format|
 
       if params[:format] == "json"
