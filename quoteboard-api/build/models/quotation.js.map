@@ -1,0 +1,1 @@
+{"version":3,"file":"quotation.js","sourceRoot":"","sources":["../../src/models/quotation.ts"],"names":[],"mappings":";;AAAA,uCAAgE;AAUhE,MAAM,eAAe,GAAG,IAAI,iBAAM,CAAC;IACjC,KAAK,EAAE,EAAC,IAAI,EAAE,sBAAW,CAAC,MAAM,EAAE,OAAO,EAAE,IAAI,EAAC;CACjD,EAAE,EAAE,UAAU,EAAE,IAAI,EAAE,CAAC,CAAC;AAEZ,QAAA,SAAS,GAAG,gBAAK,CAAoB,WAAW,EAAE,eAAe,CAAC,CAAC"}
