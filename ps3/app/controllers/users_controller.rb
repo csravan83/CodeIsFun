@@ -13,9 +13,9 @@ class UsersController < ApplicationController
   end
 
   def txt
-    # respond_to do |format|
-    #   format.text { render :plain => File.open("/home/wanlipa/Desktop/web17-01/ps3/public/hello.txt")}
-    # end
+    respond_to do |format|
+      format.text { render :plain => File.open(File.join(asset_path "hello.txt"))}
+    end
 
   end
 
