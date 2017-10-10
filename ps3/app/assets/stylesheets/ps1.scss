@@ -1,0 +1,30 @@
+// Place all the styles related to the sites controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap";
+@import "bootstrap-sprockets";
+
+
+.card-title{
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.card-block{
+  border-top: 1px solid #eaeaea;
+  padding-top:15px;
+  padding-bottom: 10px;
+}
+
+.btn-xlarge{
+  font-size: 1.7em;
+  background-color: black;
+}
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #222222;
+}
+

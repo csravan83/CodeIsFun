@@ -1,0 +1,35 @@
+<html>
+<head>
+
+  <title>Problem Set-1</title>
+
+  <nav class="navbar navbar-default navbar-inverse">
+    <div class="navbar-header">
+      <%= link_to "Division",divisions_show_path , class: "navbar-brand"%>
+      <%= link_to "Home",root_path,class:"navbar-brand"%>
+      <%= link_to "NewYorkTimes",ps1_page_path, class: "navbar-brand", id: "logo"  %>
+    </div>
+  </nav>
+
+  </head>
+<body>
+
+<div>
+  <%= form_tag do %>
+      <%= number_field_tag "number1" ,nil,min: 0 %>
+      / <%= number_field_tag "number2" ,nil,min:0 %>
+      <%= submit_tag "submit" , :action => @show %>
+  <% end %>
+  <br>
+  <p>Total : <%= @show %></p>
+
+  <p><%= @msg%> <%= @name%> <%= @btrace%></p>
+
+
+</div>
+
+
+</body>
+
+<%= render 'ps1/footer' %>
+</html>

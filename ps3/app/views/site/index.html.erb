@@ -1,5 +1,5 @@
 <h1>Problem Sets</h1>
 
-<li><%= link_to 'Problem Set 1', 'http://web1.cs.ait.ac.th/PS1' %></li>
-<li><%= link_to 'Problem Set 2', 'http://web1.cs.ait.ac.th/ps2' %></li>
-<li><%= link_to 'Problem Set 3', 'http://web1.cs.ait.ac.th/ps3' %></li>
+<li><%= link_to 'Problem Set 1', :controller => :home, :action => :index %></li>
+<li><%= link_to 'Problem Set 2', :controller => :basics, :action => :quotations %></li>
+<li><%= link_to 'Problem Set 3', :controller => :users, :action => :index %></li>
