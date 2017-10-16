@@ -1,0 +1,118 @@
+{
+  "MiniTest": {
+    "coverage": {
+      "/home/wanlipa/Desktop/web17-01/ps3/test/controllers/site_controller_test.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/home/wanlipa/Desktop/web17-01/ps3/test/controllers/users_controller_test.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/home/wanlipa/Desktop/web17-01/ps3/app/controllers/users_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/wanlipa/Desktop/web17-01/ps3/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/home/wanlipa/Desktop/web17-01/ps3/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/home/wanlipa/Desktop/web17-01/ps3/app/helpers/ps1_helper.rb": [
+        1,
+        null
+      ],
+      "/home/wanlipa/Desktop/web17-01/ps3/app/helpers/site_helper.rb": [
+        1,
+        null
+      ],
+      "/home/wanlipa/Desktop/web17-01/ps3/app/helpers/users_helper.rb": [
+        1,
+        null
+      ],
+      "/home/wanlipa/Desktop/web17-01/ps3/app/controllers/ps1_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/wanlipa/Desktop/web17-01/ps3/app/controllers/site_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1508166834
+  }
+}
