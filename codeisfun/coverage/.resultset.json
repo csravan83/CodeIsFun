@@ -1,0 +1,172 @@
+{
+  "MiniTest": {
+    "coverage": {
+      "/home/wanlipa/Desktop/web17-01/codeisfun/config/environment.rb": [
+        null,
+        1,
+        null,
+        null,
+        1
+      ],
+      "/home/wanlipa/Desktop/web17-01/codeisfun/config/environments/test.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/wanlipa/Desktop/web17-01/codeisfun/config/initializers/application_controller_renderer.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/wanlipa/Desktop/web17-01/codeisfun/config/initializers/assets.rb": [
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/wanlipa/Desktop/web17-01/codeisfun/config/initializers/backtrace_silencers.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/wanlipa/Desktop/web17-01/codeisfun/config/initializers/cookies_serializer.rb": [
+        null,
+        null,
+        null,
+        null,
+        1
+      ],
+      "/home/wanlipa/Desktop/web17-01/codeisfun/config/initializers/filter_parameter_logging.rb": [
+        null,
+        null,
+        null,
+        1
+      ],
+      "/home/wanlipa/Desktop/web17-01/codeisfun/config/initializers/inflections.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/wanlipa/Desktop/web17-01/codeisfun/config/initializers/mime_types.rb": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/wanlipa/Desktop/web17-01/codeisfun/config/initializers/wrap_parameters.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/wanlipa/Desktop/web17-01/codeisfun/config/routes.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/home/wanlipa/Desktop/web17-01/codeisfun/app/controllers/site_controller.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
+      "/home/wanlipa/Desktop/web17-01/codeisfun/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/home/wanlipa/Desktop/web17-01/codeisfun/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/home/wanlipa/Desktop/web17-01/codeisfun/app/helpers/site_helper.rb": [
+        1,
+        null
+      ]
+    },
+    "timestamp": 1508318045
+  }
+}
