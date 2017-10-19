@@ -1,10 +1,10 @@
 # config valid only for current version of Capistrano
 lock "3.9.1"
 
-set :application, 'ps3'
+set :application, 'codeisfun'
 set :repo_url, 'git@vgl-ait.org:web17-01.git'
-set :deploy_to, '/home/deploy/ps3'
-set :repo_tree, 'ps3'
+set :deploy_to, '/home/deploy/codeisfun'
+set :repo_tree, 'codeisfun'
 append :linked_files, 'config/database.yml', 'config/secrets.yml'
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system'
 set :rbenv_ruby, '2.4.1'
