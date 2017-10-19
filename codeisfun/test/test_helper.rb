@@ -10,7 +10,7 @@ SimpleCov.formatters = [
 
 SimpleCov.start
 
-require_relative '../string_ops'
+# require_relative '../string_ops'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 
