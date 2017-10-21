@@ -57,7 +57,8 @@
   }
 }
 .jumbotron{
-  background-image: asset-url('code.jpg');
+  //background-image: assets-url('code.jpg');
+  background-color: black;
   background-size: cover;
   height: 550px;
 }
