@@ -1,6 +1,8 @@
 require 'simplecov'
 require 'simplecov-json'
 require 'simplecov-rcov'
+require 'metric_fu/metrics/rcov/simplecov_formatter'
+SimpleCov.formatter = SimpleCov::Formatter::MetricFu
 
 SimpleCov.formatters = [
     SimpleCov::Formatter::HTMLFormatter,
