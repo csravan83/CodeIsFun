@@ -19,8 +19,11 @@ MetricFu.configuration.configure_metric(:churn) do |churn|
   churn.start_date = '6 months ago'
 end
 
-MetricFu::Configuration.run do |config|
-  config.templates_configuration do |tc|
-    tc.link_prefix = 'sublime:/'
+# Or, to (re)configure all metrics
+MetricFu.configuration.configure_metrics.each do |metric|
+  if [ :churn, :flay].include?(metric.name)
+    metric.enabled = true
+  else
+    metric.enabled = false
   end
 end
