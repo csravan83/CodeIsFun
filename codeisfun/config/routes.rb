@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
+  devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  get 'problem/page'
 
   get 'users/index'
   get 'problem/page'
-
-  devise_for :users
   get 'sites/index'
 
   root 'sites#index'

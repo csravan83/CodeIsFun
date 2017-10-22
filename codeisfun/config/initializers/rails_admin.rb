@@ -1,5 +1,13 @@
 RailsAdmin.config do |config|
 
+  # config.authorize_with :cancan #TODO add cancancan to rails_admin config
+
+  # redirect_to main_app.root_path unless current_user.is_admin?
+
+  config.authorize_with :cancan
+
+  config.parent_controller = 'ApplicationController'
+
   ### Popular gems integration
 
   ## == Devise ==
