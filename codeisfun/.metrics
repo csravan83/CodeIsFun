@@ -21,7 +21,7 @@ end
 
 # Or, to (re)configure all metrics
 MetricFu.configuration.configure_metrics.each do |metric|
-  if [ :churn, :flay].include?(metric.name)
+  if [:flay].include?(metric.name)
     metric.enabled = true
   else
     metric.enabled = false
