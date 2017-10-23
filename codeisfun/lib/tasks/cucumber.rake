@@ -14,10 +14,12 @@ begin
   require 'cucumber/rake/task'
 
   namespace :cucumber do
+
     Cucumber::Rake::Task.new({:ok => 'test:prepare'}, 'Run features that should pass') do |t|
       t.binary = vendored_cucumber_bin # If nil, the gem's binary is used.
       t.fork = true # You may get faster startup if you set this to false
       t.profile = 'default'
+      t.cucumber_opts = "--guess"
     end
 
     Cucumber::Rake::Task.new({:wip => 'test:prepare'}, 'Run features that are being worked on') do |t|

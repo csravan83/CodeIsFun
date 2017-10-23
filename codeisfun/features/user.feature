@@ -22,3 +22,4 @@ Feature: user
     Then should see a log in form
     When I add the information and submit Sign in
     Then I should see your email
+

@@ -26,7 +26,7 @@ When("I add the information and submit") do
   fill_in 'Password', with: @user.password
   fill_in 'Password confirmation', with: @user.password_confirmation
   click_button 'Sign up'
-  save_and_open_page
+  #save_and_open_page
 end
 
 Then("I should see my email logged in") do
@@ -34,6 +34,7 @@ Then("I should see my email logged in") do
 end
 
 # Scenario: user can log in Codeisfun page
+
 
 Given("I am a user") do
   @olduser = FactoryGirl.create :olduser
