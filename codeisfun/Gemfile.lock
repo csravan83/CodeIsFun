@@ -484,7 +484,7 @@ DEPENDENCIES
   pg (~> 0.18)
   puma (~> 3.7)
   rails (~> 5.1.4)
-  rails_admin
+  rails_admin (~> 1.2)
   rspec
   rspec-rails
   sass-rails (~> 5.0)

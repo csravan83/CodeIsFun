@@ -43,7 +43,7 @@ gem 'devise-bootstrap-views'
 # Authotization
 gem 'cancancan'
 # Admin page
-gem 'rails_admin'
+gem 'rails_admin', '~> 1.2'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
