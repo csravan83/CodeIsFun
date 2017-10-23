@@ -36,7 +36,7 @@ end
 
 When("I click on user model") do
   find('ul.nav-pills:nth-child(1) > li:nth-child(3) > a:nth-child(1)').click
-  save_and_open_page
+  # save_and_open_page
 end
 
 
