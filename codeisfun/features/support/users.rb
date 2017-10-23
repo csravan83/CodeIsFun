@@ -12,7 +12,7 @@ FactoryGirl.define do
     role {FactoryGirl.create(:member_role)}
   end
 
-  factory :olduser , class: User do
+  factory :olduser , class: User cd
     email "taylor@ait.ac.th"
     password "password"
     role {FactoryGirl.create(:member_role)}
