@@ -1,5 +1,6 @@
 # Scenario: user can registration Codeisfun page
 
+
 Given("I am sign up for new user") do
   @user = FactoryGirl.build :newuser
 end
@@ -25,7 +26,7 @@ When("I add the information and submit") do
   fill_in 'Password', with: @user.password
   fill_in 'Password confirmation', with: @user.password_confirmation
   click_button 'Sign up'
-  # save_and_open_page
+  save_and_open_page
 end
 
 Then("I should see my email logged in") do
@@ -47,7 +48,7 @@ When("I click the {string} link") do |string|
 end
 Then("should see a log in form") do
   expect(page).to have_selector("form")
-  # save_and_open_page
+  #save_and_open_page
 end
 
 When("I add the information and submit Sign in") do

@@ -25,8 +25,8 @@
         <tbody>
           <tr>
             <td class="left_align"><a href="config-routes_rb.html">config/routes.rb</a></td>
-            <td class='right_align'><tt>13</tt></td>
-            <td class='right_align'><tt>8</tt></td>
+            <td class='right_align'><tt>14</tt></td>
+            <td class='right_align'><tt>7</tt></td>
             <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
       <div class="percent_graph">
         <div class="covered" style="width:100px"></div>
@@ -54,45 +54,48 @@
           <td><pre><a name="line2">2</a> Rails.application.routes.draw do</pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line3">3</a>   get &#39;problem/page&#39;</pre></td>
+          <td><pre><a name="line3">3</a>   devise_for :users</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line4">4</a>   mount RailsAdmin::Engine =&gt; &#39;/admin&#39;, as: &#39;rails_admin&#39;</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line4">4</a> </pre></td>
-        </tr>
-        <tr class="marked">
-          <td><pre><a name="line5">5</a>   get &#39;users/index&#39;</pre></td>
-        </tr>
-        <tr class="marked">
-          <td><pre><a name="line6">6</a>   get &#39;problem/page&#39;</pre></td>
+          <td><pre><a name="line5">5</a> </pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line7">7</a> </pre></td>
-        </tr>
-        <tr class="marked">
-          <td><pre><a name="line8">8</a>   devise_for :admins</pre></td>
-        </tr>
-        <tr class="marked">
-          <td><pre><a name="line9">9</a>   devise_for :users</pre></td>
-        </tr>
-        <tr class="marked">
-          <td><pre><a name="line10">10</a>   get &#39;sites/index&#39;</pre></td>
+          <td><pre><a name="line6">6</a>   # mount &quot;sites/index&quot; =&gt; redirect(&quot;https://web1.cs.ait.ac.th/&quot;), :constraints =&gt; { :protocol =&gt; &quot;http://&quot; }</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line11">11</a> </pre></td>
+          <td><pre><a name="line7">7</a>   # mount &quot;sites/index&quot; =&gt; redirect(&quot;https://web1.cs.ait.ac.th/&quot;), :constraints =&gt; { :subdomain =&gt; &quot;&quot; }</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line8">8</a> </pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line12">12</a>   root &#39;sites#index&#39;</pre></td>
+          <td><pre><a name="line9">9</a>   get &#39;users/index&#39;</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line10">10</a>   get &#39;problem/page&#39;</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line11">11</a>   get &#39;sites/index&#39;</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line13">13</a>   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html</pre></td>
+          <td><pre><a name="line12">12</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line13">13</a>   root &#39;sites#index&#39;</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line14">14</a> end</pre></td>
+          <td><pre><a name="line14">14</a>   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line15">15</a> end</pre></td>
         </tr>
       </tbody>
     </table>
 
-    <p>Generated on 2017-10-22 15:09:03 +0700 with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
+    <p>Generated on 2017-10-23 16:34:11 +0700 with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
 
   </body>
 </html>
