@@ -12,12 +12,14 @@
 
 # Admin
 User.create(email: "admin@ait.asia",
+            username: "admin",
             password: "secret123",
             password_confirmation: "secret123",
             role: @admin)
 
 # Member
 User.create(email: "member@ait.asia",
+            username: "member",
             password: "secret123",
             password_confirmation: "secret123",
             role: @member)

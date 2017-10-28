@@ -5,8 +5,18 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   belongs_to :role
+  validates_uniqueness_of :username
+
+
 
   before_validation :assign_role
+
+  def banned
+
+  end
+  def unbanned
+
+  end
 
   def assign_role
     self.role = Role.find_by_name("Member") if self.role.nil?

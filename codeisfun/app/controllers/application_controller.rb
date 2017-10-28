@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :authenticate_user!, except: [:index]
+  before_action :update_sanitized_params, if: :devise_controller?
+  before_action :banned?
 
   rescue_from CanCan::AccessDenied do |exception|
     redirect_to main_app.root_path, :alert => exception.message
@@ -15,12 +17,21 @@ class ApplicationController < ActionController::Base
     !!current_user
   end
 
-  def require_user
-    if !logged_in?
-      flash[:danger] = "You must be logged in to perform that action"
-      redirect_to root_path
-    end
+
+  def update_sanitized_params
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:username, :email, :password])
   end
 
 
+  def banned?
+    if current_user.present? && current_user.banned?
+      sign_out current_user
+      flash[:error] = "This account has been suspended...."
+      root_path
+    end
+  end
+
 end
+
+
+
