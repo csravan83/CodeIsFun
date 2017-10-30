@@ -11,9 +11,9 @@
 
             </li>
             <% if logged_in? and current_user.admin? %>
-                <li><%= link_to "Ban This User", :controller => :users, :action => :ban, id: user.id %></li>
+                <li><%= link_to "Ban This User", {:controller => :users, :action => :ban, id: user.id } ,data: { confirm: "Are you sure?" } %></li>
                 <% if user.banned? %>
-                    <li><%= link_to "UnBan This User", :controller => :users, :action => :unban , id: user.id %></li>
+                    <li><%= link_to "UnBan This User", { :controller => :users, :action => :unban , id: user.id }, data: { confirm: "Are you sure?" }%></li>
                 <% end %>
             <%end%>
           </div>
@@ -21,5 +21,7 @@
       </ul>
   <% end %>
 </div>
+
+
 
 

@@ -15,4 +15,6 @@ Rails.application.routes.draw do
   get 'users/ban'
   get 'users/unban'
 
+  get 'users/show'
+
 end

@@ -45,6 +45,11 @@ gem 'cancancan'
 # Admin page
 gem 'rails_admin', '~> 1.2'
 
+
+#paperclip gem for picture attachment
+gem "paperclip", "~> 5.0.0"
+
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
