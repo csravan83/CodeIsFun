@@ -1,0 +1,25 @@
+<% if user_signed_in? and current_user.admin? %>
+    <ul class="nav navbar-nav navbar-right" >
+      <%= link_to '<button type="button">Add</button>'.html_safe%>
+    </ul>
+<%end%>
+
+<h1>Problems</h1>
+
+<ul>
+  <select>
+    <option>Select type</option>
+    <option><%= link_to "Basic" %></option>
+    <option><%= link_to "Intermediate" %></option>
+    <option><%= link_to "Advanced" %>
+  </select>
+
+  <li><%= link_to 'Problem 1' %></li>
+  <li><%= link_to 'Problem 2' %></li>
+  <li><%= link_to 'Problem 3' %></li>
+</ul>
+
+
+
+
+
