@@ -44,7 +44,8 @@ gem 'devise-bootstrap-views'
 gem 'cancancan'
 # Admin page
 gem 'rails_admin', '~> 1.2'
-
+# Paper Trail tracking version
+gem 'paper_trail'
 
 #paperclip gem for picture attachment
 gem "paperclip", "~> 5.0.0"
