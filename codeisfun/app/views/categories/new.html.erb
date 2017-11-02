@@ -1,0 +1,6 @@
+
+<%= form_for :category , :url => {:action => "new", :controller => "categories"} do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.submit "new" %>
+<% end %>

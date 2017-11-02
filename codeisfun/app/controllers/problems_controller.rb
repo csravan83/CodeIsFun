@@ -18,6 +18,7 @@ class ProblemsController < ApplicationController
   # GET /problems/new
   def new
     @problem = Problem.new
+    # 1.times { @problem.categories.build}
   end
 
   # GET /problems/1/edit
@@ -72,6 +73,7 @@ class ProblemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def problem_params
-      params.require(:problem).permit(:title, :description, :input, :output, :TC1, :TC2, :TC3, :status, :author, :category_id)
+      params.require(:problem).permit( :title, :description, :input, :output, :TC1, :TC2, :TC3, :status, :author, :category_id)
+    #   , category_attributes: [:id, :name]
     end
 end

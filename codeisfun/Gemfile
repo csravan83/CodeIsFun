@@ -45,9 +45,11 @@ gem 'cancancan'
 # Admin page
 gem 'rails_admin', '~> 1.2'
 
-
 #paperclip gem for picture attachment
 gem "paperclip", "~> 5.0.0"
+
+# paper trail for versioning system
+gem 'paper_trail'
 
 
 # Use Capistrano for deployment

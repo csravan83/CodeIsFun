@@ -10,7 +10,11 @@
       </ul>
     </div>
   <% end %>
+    <div class="field">
+      <%= form.label :Category %>
 
+      <%= collection_select(:problem, :category_id, Category.all, :id, :name, prompt: true) %>
+    </div>
   <div class="field">
     <%= form.label :title %>
     <%= form.text_field :title, id: :problem_title %>
@@ -56,10 +60,10 @@
     <%= form.text_field :author, id: :problem_author %>
   </div>
 
-  <div class="field">
-    <%= form.label :category_id %>
-    <%= form.text_field :category_id, id: :problem_category_id %>
-  </div>
+  <!--<div class="field">-->
+    <!--<%= form.label :category_id %>-->
+    <!--<%= form.text_field :category_id, id: :problem_category_id %>-->
+  <!--</div>-->
 
   <div class="actions">
     <%= form.submit %>

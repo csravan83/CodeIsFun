@@ -12,7 +12,6 @@
     <![endif]-->
   </head>
   <body>
-
     <div class="navbar navbar-default navbar-static-top">
       <div class="container">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
@@ -24,13 +23,16 @@
 
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
-            <li><%= link_to "All Users", "../users/index"  %></li>
+            <li><%= link_to "All Users", users_index_path  %></li>
           </ul>
           <% if user_signed_in? %>
           <ul class="nav navbar-nav">
-            <li><%= link_to "Problems", "../problem/page"  %></li>
-            <li> <%= link_to "Your Profile", "../users/show" %></li>
+            <li><%= link_to "Problems", categories_show_path  %></li>
+            <li> <%= link_to "Your Profile", users_show_path %></li>
           </ul>
+              <ul class="nav navbar-nav navbar-right" >
+                <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+              </ul>
           <% end %>
         </div>
       </div>

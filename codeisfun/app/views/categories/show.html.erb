@@ -1,6 +1,10 @@
-<h1>Categories</h1>
-<ul>
-  <li><%= link_to "Category 1",categories_index_path %></li>
-  <li><%= link_to "Category 2",categories_index_path %></li>
-  <li><%= link_to "Category 3",categories_index_path %></li>
-</ul>
+
+<div class="center jumbotron">
+  <h3>Categories</h3>
+  <br>
+
+    <% @categories.all.each do |cat| %>
+    <%= link_to cat.name ,problems_path ,class: "btn btn-danger btn-lg btn-xlarge"%>
+    <% end %>
+
+</div>

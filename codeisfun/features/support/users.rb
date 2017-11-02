@@ -17,12 +17,15 @@ FactoryGirl.define do
   end
 
   factory :olduser , class: User do
+    # email "taylor@ait.ac.th"
+    username "taylor"
     email "taylor@ait.ac.th"
     password "password"
     role {FactoryGirl.create(:member_role)}
   end
 
   factory :adminuser, class: User do
+    username "admin"
     email "admin@ait.asia"
     password "secret123"
     role {FactoryGirl.create(:admin_role)}

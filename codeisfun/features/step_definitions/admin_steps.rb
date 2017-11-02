@@ -15,7 +15,7 @@ Then("I Should see a sign in form") do
 end
 
 When("I fill in the details and submit") do
-  fill_in 'Email', with: @adminuser.email
+  fill_in 'Username', with: @adminuser.username
   fill_in 'Password', with: @adminuser.password
   click_button 'Sign in'
   #save_and_open_page

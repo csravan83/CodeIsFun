@@ -7,9 +7,13 @@ Rails.application.routes.draw do
   # mount "sites/index" => redirect("https://web1.cs.ait.ac.th/"), :constraints => { :subdomain => "" }
 
   get 'users/index'
+
   get 'categories/show'
   get 'categories/index'
-  get 'problems/index'
+  get 'categories/new'
+  post 'categories/new'
+
+  # get 'problems/index'
   get 'sites/index'
   root 'sites#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
