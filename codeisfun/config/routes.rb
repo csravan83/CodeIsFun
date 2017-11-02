@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :problems
   devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
@@ -7,8 +8,9 @@ Rails.application.routes.draw do
 
   get 'users/index'
   get 'categories/show'
-  get 'sites/index'
   get 'categories/index'
+  get 'problems/index'
+  get 'sites/index'
   root 'sites#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
@@ -16,4 +18,5 @@ Rails.application.routes.draw do
   get 'users/unban'
 
   get 'users/show'
+
 end

@@ -25,17 +25,17 @@
         <tbody>
           <tr>
             <td class="left_align"><a href="app-models-user_rb.html">app/models/user.rb</a></td>
-            <td class='right_align'><tt>23</tt></td>
-            <td class='right_align'><tt>10</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>91.30%</tt></div>
+            <td class='right_align'><tt>29</tt></td>
+            <td class='right_align'><tt>13</tt></td>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>93.10%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:91px"></div>
-        <div class="uncovered" style="width:9px"></div>
+        <div class="covered" style="width:93px"></div>
+        <div class="uncovered" style="width:7px"></div>
       </div></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>80.00%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>84.62%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:80px"></div>
-        <div class="uncovered" style="width:20px"></div>
+        <div class="covered" style="width:85px"></div>
+        <div class="uncovered" style="width:15px"></div>
       </div></td>
           </tr>
         </tbody>
@@ -71,58 +71,76 @@
         <tr class="marked">
           <td><pre><a name="line8">8</a>   belongs_to :role</pre></td>
         </tr>
-        <tr class="inferred">
-          <td><pre><a name="line9">9</a> </pre></td>
-        </tr>
         <tr class="marked">
-          <td><pre><a name="line10">10</a>   before_validation :assign_role</pre></td>
+          <td><pre><a name="line9">9</a>   validates_uniqueness_of :username</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line11">11</a> </pre></td>
+          <td><pre><a name="line10">10</a> </pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line12">12</a>   def assign_role</pre></td>
+          <td><pre><a name="line11">11</a>   has_attached_file :avatar, :styles =&gt; { :medium =&gt; &quot;300x300&gt;&quot;, :thumb =&gt; &quot;100x100#&quot; }, :default_url =&gt; &quot;/images/:style/missing.png&quot;</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line12">12</a>   validates_attachment_content_type :avatar, :content_type =&gt; /\Aimage\/.*\Z/</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line13">13</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line14">14</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line15">15</a>   before_validation :assign_role</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line16">16</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line17">17</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line18">18</a>   def assign_role</pre></td>
         </tr>
         <tr class="uncovered">
-          <td><pre><a name="line13">13</a>     self.role = Role.find_by_name(&quot;Member&quot;) if self.role.nil?</pre></td>
+          <td><pre><a name="line19">19</a>     self.role = Role.find_by_name(&quot;Member&quot;) if self.role.nil?</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line14">14</a>   end</pre></td>
+          <td><pre><a name="line20">20</a>   end</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line15">15</a> </pre></td>
+          <td><pre><a name="line21">21</a> </pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line16">16</a>   def admin?</pre></td>
+          <td><pre><a name="line22">22</a>   def admin?</pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line17">17</a>     self.role.name == &quot;Admin&quot; if !self.role.blank?</pre></td>
+          <td><pre><a name="line23">23</a>     self.role.name == &quot;Admin&quot; if !self.role.blank?</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line18">18</a>   end</pre></td>
+          <td><pre><a name="line24">24</a>   end</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line19">19</a> </pre></td>
+          <td><pre><a name="line25">25</a> </pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line20">20</a>   def member?</pre></td>
+          <td><pre><a name="line26">26</a>   def member?</pre></td>
         </tr>
         <tr class="uncovered">
-          <td><pre><a name="line21">21</a>     self.role.name == &quot;Member&quot; if !self.role.blank?</pre></td>
+          <td><pre><a name="line27">27</a>     self.role.name == &quot;Member&quot; if !self.role.blank?</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line22">22</a>   end</pre></td>
+          <td><pre><a name="line28">28</a>   end</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line23">23</a> </pre></td>
+          <td><pre><a name="line29">29</a> </pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line24">24</a> end</pre></td>
+          <td><pre><a name="line30">30</a> end</pre></td>
         </tr>
       </tbody>
     </table>
 
-    <p>Generated on 2017-10-23 16:34:11 +0700 with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
+    <p>Generated on 2017-11-02 14:35:43 +0700 with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
 
   </body>
 </html>

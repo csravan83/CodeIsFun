@@ -1,6 +1,6 @@
 <% if user_signed_in? and current_user.admin? %>
     <ul class="nav navbar-nav navbar-right" >
-      <%= link_to '<button type="button">Add</button>'.html_safe%>
+      <%= link_to '<button type="button">Add</button>'.html_safe,new_problem_path%>
     </ul>
 <%end%>
 

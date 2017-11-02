@@ -4,15 +4,10 @@ RailsAdmin.config do |config|
 
   # redirect_to main_app.root_path unless current_user.is_admin?
 
+  config.authorize_with :cancan
+
   config.parent_controller = 'ApplicationController'
 
-  # config.model "PaperTrail::Version" do
-  #   visible false
-  # end
-  #
-  # config.model "PaperTrail::VersionAssociation" do
-  #   visible false
-  # end
   ### Popular gems integration
 
   ## == Devise ==
@@ -22,21 +17,14 @@ RailsAdmin.config do |config|
   config.current_user_method(&:current_user)
 
   ## == Cancan ==
-  config.authorize_with :cancan
+  # config.authorize_with :cancan
 
   ## == Pundit ==
   # config.authorize_with :pundit
 
   ## == PaperTrail ==
-  config.audit_with :paper_trail, 'User', 'PaperTrail::Version' # PaperTrail >= 3.0.0
-
-
-  # # config for paper trail
-  # config.audit_with :paper_trail, 'Admin', 'PaperTrail::Version' # PaperTrail >= 3.0.0
-  # config.audit_with :paper_trail, 'Admin' , 'Version' # PaperTrail < 3.0.0
-  #
   # config.audit_with :paper_trail, 'User', 'PaperTrail::Version' # PaperTrail >= 3.0.0
-  # config.audit_with :paper_trail, 'User', 'Version' # PaperTrail < 3.0.0
+
   ### More at https://github.com/sferik/rails_admin/wiki/Base-configuration
 
   ## == Gravatar integration ==
@@ -55,7 +43,7 @@ RailsAdmin.config do |config|
     show_in_app
 
     ## With an audit adapter, you can add:
-    history_index
-    history_show
+    # history_index
+    # history_show
   end
 end

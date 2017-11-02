@@ -3,7 +3,6 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!, except: [:index]
   before_action :update_sanitized_params, if: :devise_controller?
   before_action :banned?
-  before_action :set_paper_trail_whodunnit
 
   rescue_from CanCan::AccessDenied do |exception|
     redirect_to main_app.root_path, :alert => exception.message

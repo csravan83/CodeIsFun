@@ -1,0 +1,67 @@
+<%= form_with(model: problem, local: true) do |form| %>
+  <% if problem.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(problem.errors.count, "error") %> prohibited this problem from being saved:</h2>
+
+      <ul>
+      <% problem.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :problem_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :problem_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :input %>
+    <%= form.text_area :input, id: :problem_input %>
+  </div>
+
+  <div class="field">
+    <%= form.label :output %>
+    <%= form.text_area :output, id: :problem_output %>
+  </div>
+
+  <div class="field">
+    <%= form.label :TC1 %>
+    <%= form.text_area :TC1, id: :problem_TC1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :TC2 %>
+    <%= form.text_area :TC2, id: :problem_TC2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :TC3 %>
+    <%= form.text_area :TC3, id: :problem_TC3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.select :Status, ['Basic','Intermediate','Advanced'] %>
+  </div>
+
+  <div class="field">
+    <%= form.label :author %>
+    <%= form.text_field :author, id: :problem_author %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category_id %>
+    <%= form.text_field :category_id, id: :problem_category_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
