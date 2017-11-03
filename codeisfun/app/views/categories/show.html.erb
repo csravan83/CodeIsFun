@@ -2,7 +2,9 @@
 <div class="center jumbotron">
   <h3>Categories</h3>
   <br>
+  <% if current_user.admin? %>
     <%= link_to " Create New Category", categories_new_path , class: "btn btn-danger btn-lg btn-xlarge"%>
+  <%end%>
 
     <% @categories.all.each do |cat| %>
     <%= link_to cat.name ,problems_path ,class: "btn btn-danger btn-lg btn-xlarge"%>
