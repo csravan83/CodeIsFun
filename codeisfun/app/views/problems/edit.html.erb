@@ -1,6 +1,11 @@
-<h1>Editing Problem</h1>
+<div class="panel panel-warning">
+  <div class="panel-heading ">
+    <h4>Editing Problem</h4>
+  </div>
+  <div class="panel-body">
+    <%= render 'form', problem: @problem %>
 
-<%= render 'form', problem: @problem %>
-
-<%= link_to 'Show', @problem %> |
-<%= link_to 'Back', problems_path %>
+    <%= link_to 'Show', @problem %> |
+    <%= link_to 'Back', problems_path %>
+  </div>
+</div>
