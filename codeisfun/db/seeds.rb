@@ -24,6 +24,3 @@ User.create(email: "member@ait.asia",
             password_confirmation: "secret123",
             role: @member)
 
-# Initail Data for Category
-Category.create(name: "Algorithm")
-Category.create(name: "Data Structure")
