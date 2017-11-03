@@ -66,14 +66,12 @@ class ProblemsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_problem
       @problem = Problem.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+
     def problem_params
       params.require(:problem).permit( :title, :description, :input, :output, :TC1, :TC2, :TC3, :status, :author, :category_id)
-    #   , category_attributes: [:id, :name]
     end
 end

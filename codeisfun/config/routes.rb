@@ -13,6 +13,10 @@ Rails.application.routes.draw do
   get 'categories/new'
   post 'categories/new'
 
+  get 'categories/create'
+  post 'categories/create'
+
+
   # get 'problems/index'
   get 'sites/index'
   root 'sites#index'

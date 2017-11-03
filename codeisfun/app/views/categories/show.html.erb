@@ -2,6 +2,7 @@
 <div class="center jumbotron">
   <h3>Categories</h3>
   <br>
+    <%= link_to " Create New Category", categories_new_path , class: "btn btn-danger btn-lg btn-xlarge"%>
 
     <% @categories.all.each do |cat| %>
     <%= link_to cat.name ,problems_path ,class: "btn btn-danger btn-lg btn-xlarge"%>
