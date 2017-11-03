@@ -1,13 +1,14 @@
 
 <div class="center jumbotron">
-  <h3>Categories</h3>
+  <h1>Categories</h1>
   <br>
   <% if current_user.admin? %>
-    <%= link_to " Create New Category", categories_new_path , class: "btn btn-danger btn-lg btn-xlarge"%>
+    <%= link_to " Create New Category", categories_new_path , class: "btn btn-success btn-lg btn-xlarge"%>
   <%end%>
-
+  <br>
+  <h3>List of the Categories</h3>
     <% @categories.all.each do |cat| %>
-    <%= link_to cat.name ,problems_path ,class: "btn btn-danger btn-lg btn-xlarge"%>
+    <%= link_to cat.name ,problems_path ,class: "btn btn-info btn-lg btn-xlarge"%>
     <% end %>
 
 </div>

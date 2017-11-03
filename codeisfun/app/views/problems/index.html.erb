@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 <% if user_signed_in? and current_user.admin? %>
     <ul class="nav navbar-nav navbar-right" >
-      <%= link_to '<button type="button">Add</button>'.html_safe,new_problem_path%>
+      <%= link_to 'Add Problem'.html_safe,new_problem_path, class: "btn btn-success btn-medium"%>
     </ul>
 <%end%>
 
@@ -40,9 +40,9 @@
         <td><%= problem.author %></td>
         <!--<td><%= problem.category_id %></td>-->
         <% if user_signed_in? and current_user.admin? %>
-        <td><%= link_to 'Show', problem %></td>
-        <td><%= link_to 'Edit', edit_problem_path(problem) %></td>
-        <td><%= link_to 'Destroy', problem, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', problem , class: "btn btn-info btn-small"%></td>
+        <td><%= link_to 'Edit', edit_problem_path(problem) , class: "btn btn-warning btn-small"%></td>
+        <td><%= link_to 'Destroy', problem, method: :delete, data: { confirm: 'Are you sure?' } ,class: "btn btn-danger btn-small"%></td>
         <%end%>
       </tr>
     <% end %>

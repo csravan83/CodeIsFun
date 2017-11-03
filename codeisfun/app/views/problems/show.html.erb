@@ -1,5 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+<div class="panel panel-info">
+  <div class="panel-heading ">
+    <h4>Show Problem</h4>
+  </div>
+  <div class="panel-body">
 <p>
   <strong>Title:</strong>
   <%= @problem.title %>
@@ -52,3 +57,5 @@
 
 <%= link_to 'Edit', edit_problem_path(@problem) %> |
 <%= link_to 'Back', problems_path %>
+  </div>
+</div>
