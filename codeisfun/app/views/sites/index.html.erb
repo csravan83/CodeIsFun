@@ -7,7 +7,7 @@
 
   <%if user_signed_in?%>
       <h3>Hello <%= current_user.email %> Have Fun </h3>
-     <%= link_to "Problems" , categories_show_path,  class: "btn btn-danger btn-lg btn-xlarge"%>
+     <%= link_to "Let Code" , categories_show_path,  class: "btn btn-danger btn-lg btn-xlarge"%>
      <%= link_to "Sign out", destroy_user_session_path, method: :delete , class: "btn btn-danger btn-lg btn-xlarge"%>
   <% else %>
       <%= link_to 'Sign Up', new_user_registration_path, class: "btn btn-danger btn-lg btn-xlarge" %>
