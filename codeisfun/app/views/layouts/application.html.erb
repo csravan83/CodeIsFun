@@ -31,7 +31,7 @@
             <li> <%= link_to "Your Profile", users_show_path %></li>
           </ul>
               <ul class="nav navbar-nav navbar-right" >
-                <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+                <%= link_to "Sign out", destroy_user_session_path, method: :delete ,class: "btn btn-danger btn-small"%>
               </ul>
           <% end %>
         </div>

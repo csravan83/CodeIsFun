@@ -39,11 +39,15 @@
         <td><%= problem.status %></td>
         <td><%= problem.author %></td>
         <!--<td><%= problem.category_id %></td>-->
+        <% if user_signed_in? and !current_user.admin? %>
+            <td><%= link_to 'Show', problem , class: "btn btn-info btn-small"%></td>
+        <%end%>
         <% if user_signed_in? and current_user.admin? %>
         <td><%= link_to 'Show', problem , class: "btn btn-info btn-small"%></td>
         <td><%= link_to 'Edit', edit_problem_path(problem) , class: "btn btn-warning btn-small"%></td>
         <td><%= link_to 'Destroy', problem, method: :delete, data: { confirm: 'Are you sure?' } ,class: "btn btn-danger btn-small"%></td>
         <%end%>
+
       </tr>
     <% end %>
   </tbody>
@@ -51,4 +55,3 @@
 </div>
 <br>
 
-<!--<%= link_to 'New Problem', new_problem_path %>-->
