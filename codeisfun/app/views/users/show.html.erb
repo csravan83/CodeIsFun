@@ -3,7 +3,9 @@
     <h4 algin="center">Welcome to <%= current_user.username %>'s Page</h4>
   </div>
   <div class="panel-body">
-    <li class="round-image-50"><%= image_tag(current_user.avatar.url(:thumb)) %></li>
+    <li class="round-image-50"><%= image_tag(current_user.avatar.url(:medium)) %></li>
+    <li> Name: <%=current_user.username%> </li>
+    <li> Email: <%=current_user.email %></li>
     <%= link_to "Update My profile", edit_user_registration_path %>
   </div>
 </div>
