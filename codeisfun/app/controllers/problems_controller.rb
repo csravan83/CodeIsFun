@@ -7,7 +7,11 @@ class ProblemsController < ApplicationController
   end
 
   def index
-    @problems = Problem.where(category_id: params[:catid])
+    if params[:catid].blank?
+      @problems = Problem.all
+    else
+      @problems = Problem.where(category_id: params[:catid])
+    end
   end
 
   # GET /problems/1
