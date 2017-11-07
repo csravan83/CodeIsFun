@@ -22,7 +22,6 @@ class ProblemsController < ApplicationController
   # GET /problems/new
   def new
     @problem = Problem.new
-    # 1.times { @problem.categories.build}
   end
 
   # GET /problems/1/edit
