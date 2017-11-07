@@ -7,7 +7,7 @@ class ProblemsController < ApplicationController
   end
 
   def index
-    @problems = Problem.all
+    @problems = Problem.where(category_id: params[:catid])
   end
 
   # GET /problems/1

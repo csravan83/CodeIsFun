@@ -8,7 +8,8 @@
   <br>
   <h3>List of the Categories</h3>
     <% @categories.all.each do |cat| %>
-    <%= link_to cat.name ,problems_path ,class: "btn btn-info btn-lg btn-xlarge"%>
+    <%= link_to cat.name ,{:controller => :problems , :action => :index , :catid => cat.id } ,class: "btn btn-info btn-lg btn-xlarge"%>
     <% end %>
-
 </div>
+
+<!--https://stackoverflow.com/questions/1898737/pass-parameter-by-link-to-ruby-on-rails-->
