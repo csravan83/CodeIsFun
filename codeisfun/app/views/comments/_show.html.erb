@@ -1,0 +1,11 @@
+<% @comments.each do |comment| %>
+    <div class="media">
+      <div class = "media-body">
+      <h4 class="media-heading">
+        <ul>
+          <li><%= comment.comment %> :by <%= comment.user.username%> </li>
+        </ul>
+      </h4>
+    </div>
+    </div>
+<% end %>
