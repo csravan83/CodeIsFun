@@ -17,11 +17,15 @@ class ProblemsController < ApplicationController
   # GET /problems/1
   # GET /problems/1.json
   def show
+    @comments = Comment.where(problem_id: @problem).order("created_at DESC")
+    # @comments = @problem.comments.all
+    @comment = @problem.comments.build
   end
 
   # GET /problems/new
   def new
     @problem = Problem.new
+    @comment = Comment.new(problem_id: params[:problem_id])
   end
 
   # GET /problems/1/edit

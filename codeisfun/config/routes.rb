@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
-  resources :problems
-  resources :comments
+
+  resources :problems do
+    resources :comments
+  end
+
+  # get '/comments/new/(:problem_id)', to: 'comments#new', as: :new_comment
+
   devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
@@ -27,7 +32,7 @@ Rails.application.routes.draw do
 
   get 'users/ban'
   get 'users/unban'
-
   get 'users/show'
 
+  post 'comments/create'
 end
