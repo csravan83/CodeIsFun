@@ -29,22 +29,22 @@
   <strong>Output:</strong>
   <%= @problem.output %>
 </p>
+    <% if user_signed_in? and current_user.admin? %>
+    <p>
+      <strong>Tc1:</strong>
+      <%= @problem.TC1 %>
+    </p>
 
-<p>
-  <strong>Tc1:</strong>
-  <%= @problem.TC1 %>
-</p>
+    <p>
+      <strong>Tc2:</strong>
+      <%= @problem.TC2 %>
+    </p>
 
-<p>
-  <strong>Tc2:</strong>
-  <%= @problem.TC2 %>
-</p>
-
-<p>
-  <strong>Tc3:</strong>
-  <%= @problem.TC3 %>
-</p>
-
+    <p>
+      <strong>Tc3:</strong>
+      <%= @problem.TC3 %>
+    </p>
+    <%end%>
 <p>
   <strong>Status:</strong>
   <%= @problem.status %>
@@ -54,12 +54,12 @@
   <strong>Author:</strong>
   <%= @problem.author %>
 </p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @problem.category_id %>
-</p>
-
+    <% if user_signed_in? and current_user.admin? %>
+    <p>
+      <strong>Category:</strong>
+      <%= @problem.category_id %>
+    </p>
+    <%end%>
 <%= link_to 'Back', problems_path %>
 
   </div>

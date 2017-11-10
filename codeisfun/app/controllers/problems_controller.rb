@@ -19,7 +19,7 @@ class ProblemsController < ApplicationController
   def show
     @comments = Comment.where(problem_id: @problem).order("created_at DESC")
     # @comments = @problem.comments.all
-    @comment = @problem.comments.build
+    # @comment = @problem.comments.build
   end
 
   # GET /problems/new

@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'ps6/index'
+
+  get 'ps5/index'
+
+  get 'ps4/index'
+
   get 'ps1/page'
 
   # PS1
@@ -28,5 +34,14 @@ Rails.application.routes.draw do
   root 'site#index'
   get 'users/txt'
   get 'users/dbdump'
+
+  # PS4
+  get 'ps4/index'
+
+  # PS5
+  get 'ps5/index'
+
+  # PS6
+  get 'ps6/index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
