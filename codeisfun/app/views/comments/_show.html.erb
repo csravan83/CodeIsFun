@@ -1,20 +1,38 @@
 <%= render 'comments/form'%>
 
 <h3>Total Comments: <%= pluralize(@comments.count, "Comments")%></h3>
+
+<div class="row">
 <% @comments.each do |comment| %>
-    <div class="media">
-      <div class = "media-body">
-      <h4 class="media-heading">
-        <ul>
-          <li><%= comment.comment %> <b>:by <%= comment.user.username%></b>
+
+      <div class="col-sm-1">
+        <div class="thumbnail">
+          <% if current_user == comment.user %>
+            <%= image_tag(current_user.avatar.url(:medium)) %>
+          <%else%>
+            <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+          <% end %>
+        </div><!-- /thumbnail -->
+      </div><!-- /col-sm-1 -->
+
+      <div class="col-sm-11">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <strong><%= comment.user.username%></strong> <span class="text-muted"><%= comment.created_at %></span>
+          </div>
+          <div class="panel-body">
+            <%= comment.comment %>
             <%if current_user == comment.user || current_user.admin?%>
                 <%= link_to 'Edit', edit_problem_comment_path(comment.problem ,comment) %>
                 <%= link_to 'Delete', [comment.problem ,comment], method: :delete, data: { confirm: 'Are you sure?' } %>
             <%end%>
-          </li>
-        </ul>
-      </h4>
-    </div>
-    </div>
+          </div><!-- /panel-body -->
+        </div><!-- /panel panel-default -->
+      </div><!-- /col-sm-5 -->
+
 <% end %>
+  </div>
+
+<!--https://bootsnipp.com/snippets/featured/user-comment-example-->
+
 

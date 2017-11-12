@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-<% if user_signed_in? and current_user.admin? %>
+<% if user_signed_in?%>
     <ul class="nav navbar-nav navbar-right" >
       <%= link_to 'Add Problem'.html_safe,new_problem_path, class: "btn btn-success btn-medium"%>
     </ul>
@@ -15,14 +15,14 @@
       <th>Description</th>
       <th>Input</th>
       <th>Output</th>
-      <% if user_signed_in? and current_user.admin? %>
+
         <th>Tc1</th>
         <th>Tc2</th>
         <th>Tc3</th>
         <th>Status</th>
         <th>Author</th>
         <th>Category</th>
-      <%end%>
+
       <% if user_signed_in? and current_user.admin? %>
         <th colspan="3"></th>
       <%end%>
@@ -36,14 +36,14 @@
           <td><%= problem.description %></td>
           <td><%= problem.input %></td>
           <td><%= problem.output %></td>
-        <% if user_signed_in? and current_user.admin? %>
+
           <td><%= problem.TC1 %></td>
           <td><%= problem.TC2 %></td>
           <td><%= problem.TC3 %></td>
           <td><%= problem.status %></td>
           <td><%= problem.author %></td>
           <td><%= problem.category_id %></td>
-        <%end%>
+
         <% if user_signed_in? and !current_user.admin? %>
             <td><%= link_to 'Show', problem , class: "btn btn-info btn-small"%></td>
         <%end%>
