@@ -18,6 +18,9 @@ class ApplicationController < ActionController::Base
     !!current_user
   end
 
+  def current_problem
+    @current_problem ||= Problem.find_by(params[:id])
+  end
 
   def update_sanitized_params
     devise_parameter_sanitizer.permit(:sign_up, keys: [:username, :email, :password])

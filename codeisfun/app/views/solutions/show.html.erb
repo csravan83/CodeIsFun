@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Filename:</strong>
+  <%= @solution.filename %>
+</p>
+
+<p>
+  <strong>Content type:</strong>
+  <%= @solution.content_type %>
+</p>
+
+<p>
+  <strong>File contents:</strong>
+  <%= @solution.file_contents %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @solution.user %>
+</p>
+
+<p>
+  <strong>Problem:</strong>
+  <%= @solution.problem %>
+</p>
+
+<%= link_to 'Edit', edit_solution_path(@solution) %> |
+<%= link_to 'Back', solutions_path %>

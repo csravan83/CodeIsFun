@@ -13,6 +13,8 @@ class User < ApplicationRecord
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
 
+  has_many :solutions
+
   before_validation :assign_role
 
 

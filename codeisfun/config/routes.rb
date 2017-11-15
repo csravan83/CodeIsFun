@@ -2,7 +2,9 @@ Rails.application.routes.draw do
 
   resources :problems do
     resources :comments
+    resources :solutions
   end
+
 
   # get '/comments/new/(:problem_id)', to: 'comments#new', as: :new_comment
 
