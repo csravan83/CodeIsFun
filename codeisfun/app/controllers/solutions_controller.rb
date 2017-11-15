@@ -1,6 +1,7 @@
 class SolutionsController < ApplicationController
   before_action :set_user
   before_action :find_problem
+  #before_action :find_solution
   before_action :set_solution, only: [:show, :edit, :update, :destroy]
 
   # GET /solutions
@@ -68,6 +69,15 @@ class SolutionsController < ApplicationController
     end
   end
 
+=begin
+  def solve
+    @solution = Solution.find(solution_params)
+    @solution.toggle!(:solved)
+    flash[:success] = "Solution is approved"
+    redirect_to problems_path
+  end
+=end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_solution
@@ -81,11 +91,13 @@ class SolutionsController < ApplicationController
   def find_problem
     @problem = Problem.find(params[:problem_id])
   end
+=begin
 
-  def find_comment
+  def find_solution
     @solution = @problem.solutions.find(params[:id])
   end
 
+=end
 
   # Never trust parameters from the scary internet, only allow the white list through.
     def solution_params

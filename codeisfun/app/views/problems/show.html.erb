@@ -63,7 +63,13 @@
   </div>
 </div>
 
-<%= link_to 'Submit Solution Here', new_problem_solution_path(@problem), class: "btn btn-danger btn-lg btn-xlarge" %>
+<%= link_to 'Submit Solution Here', new_problem_solution_path(@problem), class: "btn btn-primary btn-lg" %>
+
+
+
+<% if current_user.admin? %>
+ <%= link_to 'All Submissions', problem_solutions_path(@problem) ,class: "btn btn-primary btn-lg" %>
+<% end %>
 
 <%= render 'comments/show'%>
 
