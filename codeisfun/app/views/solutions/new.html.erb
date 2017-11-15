@@ -1,8 +1,0 @@
-<h1>New Solution</h1>
-
-<%= render 'form', solution: @solution %>
-<% if !current_user.admin? %>
-<%= link_to "My submissions", problem_solutions_path , class: "btn btn-success btn-lg btn-xlarge"%>
-<% end %>
-<br><br>
-<%= link_to 'Back', problem_solutions_path %>
