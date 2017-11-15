@@ -25,8 +25,8 @@
         <tbody>
           <tr>
             <td class="left_align"><a href="config-routes_rb.html">config/routes.rb</a></td>
-            <td class='right_align'><tt>20</tt></td>
-            <td class='right_align'><tt>11</tt></td>
+            <td class='right_align'><tt>40</tt></td>
+            <td class='right_align'><tt>21</tt></td>
             <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
       <div class="percent_graph">
         <div class="covered" style="width:100px"></div>
@@ -53,67 +53,127 @@
         <tr class="marked">
           <td><pre><a name="line2">2</a> Rails.application.routes.draw do</pre></td>
         </tr>
-        <tr class="marked">
-          <td><pre><a name="line3">3</a>   devise_for :users</pre></td>
+        <tr class="inferred">
+          <td><pre><a name="line3">3</a> </pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line4">4</a>   mount RailsAdmin::Engine =&gt; &#39;/admin&#39;, as: &#39;rails_admin&#39;</pre></td>
+          <td><pre><a name="line4">4</a>   resources :problems do</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line5">5</a>     resources :comments</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line5">5</a> </pre></td>
+          <td><pre><a name="line6">6</a>   end</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line6">6</a>   # mount &quot;sites/index&quot; =&gt; redirect(&quot;https://web1.cs.ait.ac.th/&quot;), :constraints =&gt; { :protocol =&gt; &quot;http://&quot; }</pre></td>
+          <td><pre><a name="line7">7</a> </pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line7">7</a>   # mount &quot;sites/index&quot; =&gt; redirect(&quot;https://web1.cs.ait.ac.th/&quot;), :constraints =&gt; { :subdomain =&gt; &quot;&quot; }</pre></td>
+          <td><pre><a name="line8">8</a>   # get &#39;/comments/new/(:problem_id)&#39;, to: &#39;comments#new&#39;, as: :new_comment</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line8">8</a> </pre></td>
+          <td><pre><a name="line9">9</a> </pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line9">9</a>   get &#39;users/index&#39;</pre></td>
+          <td><pre><a name="line10">10</a>   devise_for :users</pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line10">10</a>   get &#39;categories/show&#39;</pre></td>
-        </tr>
-        <tr class="marked">
-          <td><pre><a name="line11">11</a>   get &#39;sites/index&#39;</pre></td>
-        </tr>
-        <tr class="marked">
-          <td><pre><a name="line12">12</a>   get &#39;categories/index&#39;</pre></td>
-        </tr>
-        <tr class="marked">
-          <td><pre><a name="line13">13</a>   root &#39;sites#index&#39;</pre></td>
+          <td><pre><a name="line11">11</a>   mount RailsAdmin::Engine =&gt; &#39;/admin&#39;, as: &#39;rails_admin&#39;</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line14">14</a>   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html</pre></td>
+          <td><pre><a name="line12">12</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line13">13</a>   # mount &quot;sites/index&quot; =&gt; redirect(&quot;https://web1.cs.ait.ac.th/&quot;), :constraints =&gt; { :protocol =&gt; &quot;http://&quot; }</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line14">14</a>   # mount &quot;sites/index&quot; =&gt; redirect(&quot;https://web1.cs.ait.ac.th/&quot;), :constraints =&gt; { :subdomain =&gt; &quot;&quot; }</pre></td>
         </tr>
         <tr class="inferred">
           <td><pre><a name="line15">15</a> </pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line16">16</a>   get &#39;users/ban&#39;</pre></td>
+          <td><pre><a name="line16">16</a>   get &#39;users/index&#39;</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line17">17</a> </pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line17">17</a>   get &#39;users/unban&#39;</pre></td>
-        </tr>
-        <tr class="inferred">
-          <td><pre><a name="line18">18</a> </pre></td>
+          <td><pre><a name="line18">18</a>   get &#39;categories/show&#39;</pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line19">19</a>   get &#39;users/show&#39;</pre></td>
+          <td><pre><a name="line19">19</a>   post &#39;categories/show&#39;</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line20">20</a>   get &#39;categories/index&#39;</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line21">21</a>   get &#39;categories/new&#39;</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line22">22</a>   post &#39;categories/new&#39;</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line23">23</a>   get &#39;categories/edit&#39;</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line24">24</a>   post &#39;categories/edit&#39;</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line20">20</a> </pre></td>
+          <td><pre><a name="line25">25</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line26">26</a>   get &#39;categories/create&#39;</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line27">27</a>   post &#39;categories/create&#39;</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line21">21</a> end</pre></td>
+          <td><pre><a name="line28">28</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line29">29</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line30">30</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line31">31</a>   # get &#39;problems/index&#39;</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line32">32</a>   get &#39;sites/index&#39;</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line33">33</a>   root &#39;sites#index&#39;</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line34">34</a>   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line35">35</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line36">36</a>   get &#39;users/ban&#39;</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line37">37</a>   get &#39;users/unban&#39;</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line38">38</a>   get &#39;users/show&#39;</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line39">39</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line40">40</a>   post &#39;comments/create&#39;</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line41">41</a> end</pre></td>
         </tr>
       </tbody>
     </table>
 
-    <p>Generated on 2017-11-02 14:35:43 +0700 with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
+    <p>Generated on 2017-11-15 02:53:46 +0700 with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
 
   </body>
 </html>

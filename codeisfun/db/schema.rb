@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20171115103803) do
+=======
+# merge error
+ActiveRecord::Schema.define(version: 20171113132023) do
+
+# ActiveRecord::Schema.define(version: 20171114153650) do
+
+>>>>>>> 8ff9ffb3a4d6117746fc14c5a1202224453e8d09
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +54,8 @@ ActiveRecord::Schema.define(version: 20171115103803) do
     t.string "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_problems_on_user_id"
   end
 
   create_table "roles", force: :cascade do |t|
@@ -117,7 +127,14 @@ ActiveRecord::Schema.define(version: 20171115103803) do
   add_foreign_key "categories", "categories"
   add_foreign_key "comments", "problems"
   add_foreign_key "comments", "users"
+
+# merge error
+
+  add_foreign_key "problems", "users"
+
   add_foreign_key "solutions", "problems"
   add_foreign_key "solutions", "users"
+  # merge error
   add_foreign_key "users", "roles"
+
 end

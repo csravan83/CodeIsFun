@@ -21,6 +21,8 @@ Rails.application.routes.draw do
   get 'categories/index'
   get 'categories/new'
   post 'categories/new'
+  get 'categories/edit'
+  post 'categories/edit'
 
   get 'categories/create'
   post 'categories/create'

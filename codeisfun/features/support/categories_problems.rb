@@ -4,6 +4,7 @@ FactoryGirl.define do
     name "Algorithm"
   end
 
+
   factory :problem, class: Problem do
     title "Problem1"
     description "test"
@@ -16,5 +17,6 @@ FactoryGirl.define do
     author "admin"
     category_id "1"
     category {Category.find_by_name("Algorithm")}
+    user_id {User.find_by_id("3")}
   end
 end

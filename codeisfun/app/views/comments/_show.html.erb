@@ -7,13 +7,9 @@
 
       <div class="col-sm-1">
         <div class="thumbnail">
-          <% if current_user == comment.user %>
-            <%= image_tag(current_user.avatar.url(:medium)) %>
-          <%else%>
-            <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
-          <% end %>
-        </div><!-- /thumbnail -->
-      </div><!-- /col-sm-1 -->
+              <%= image_tag(comment.user.avatar.url(:medium)) %>
+        </div>
+      </div>
 
       <div class="col-sm-11">
         <div class="panel panel-default">
@@ -26,12 +22,12 @@
                 <%= link_to 'Edit', edit_problem_comment_path(comment.problem ,comment) %>
                 <%= link_to 'Delete', [comment.problem ,comment], method: :delete, data: { confirm: 'Are you sure?' } %>
             <%end%>
-          </div><!-- /panel-body -->
-        </div><!-- /panel panel-default -->
-      </div><!-- /col-sm-5 -->
+          </div>
+        </div>
+      </div>
 
 <% end %>
-  </div>
+</div>
 
 <!--https://bootsnipp.com/snippets/featured/user-comment-example-->
 
