@@ -29,7 +29,7 @@
   <strong>Output:</strong>
   <%= @problem.output %>
 </p>
-    <% if user_signed_in? and current_user.admin? %>
+    <% if current_user.id == @problem.user_id || current_user.admin? %>
     <p>
       <strong>Tc1:</strong>
       <%= @problem.TC1 %>
@@ -60,7 +60,7 @@
       <%= @problem.category_id %>
     </p>
     <%end%>
-<%= link_to 'Back', problems_path %>
+<%= link_to 'Back', problems_path ,class: "btn btn-default btn-small"%>
 
   </div>
 </div>

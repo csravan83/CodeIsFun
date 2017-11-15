@@ -1,5 +1,7 @@
 class ProblemsController < ApplicationController
+
   before_action :set_problem, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource
 
   # GET /problems
   # GET /problems.json
@@ -8,9 +10,9 @@ class ProblemsController < ApplicationController
 
   def index
     if params[:catid].blank?
-      @problems = Problem.all
+      @problems = Problem.paginate(per_page: 5, page: params[:page])
     else
-      @problems = Problem.where(category_id: params[:catid])
+      @problems = Problem.where(category_id: params[:catid]).paginate(per_page: 5, page: params[:page])
     end
   end
 
@@ -18,8 +20,6 @@ class ProblemsController < ApplicationController
   # GET /problems/1.json
   def show
     @comments = Comment.where(problem_id: @problem).order("created_at DESC")
-    # @comments = @problem.comments.all
-    # @comment = @problem.comments.build
   end
 
   # GET /problems/new
@@ -36,6 +36,7 @@ class ProblemsController < ApplicationController
   # POST /problems.json
   def create
     @problem = Problem.new(problem_params)
+    @problem.user = current_user
 
     respond_to do |format|
       if @problem.save
@@ -74,7 +75,7 @@ class ProblemsController < ApplicationController
 
   private
     def set_problem
-      @problem = Problem.find(params[:id])
+        @problem = Problem.find(params[:id])
     end
 
 

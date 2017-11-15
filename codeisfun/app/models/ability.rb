@@ -8,6 +8,21 @@ class Ability
       can :access, :rails_admin       # only allow admin users to access Rails Admin
       can :dashboard                  # allow access to dashboard
       can :manage, :all
+    elsif user.member?
+      can :read, [Problem, Comment]
+      can :create, [Problem, Comment]
+      can :update, Problem do |problem|
+        problem.try(:user) == user
+      end
+      can :destroy, Problem do |problem|
+        problem.try(:user) == user
+      end
+      can :update, Comment do |comment|
+        comment.try(:user) == user
+      end
+      can :destroy, Comment do |comment|
+        comment.try(:user) == user
+      end
     else
       can :read, :all
     end

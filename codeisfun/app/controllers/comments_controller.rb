@@ -3,18 +3,18 @@ class CommentsController < ApplicationController
   before_action :find_problem
   before_action :find_comment, only: [:destroy, :edit, :update, :comment_owner]
   before_action :comment_owner, only: [:destroy, :edit, :update]
-
+  load_and_authorize_resource
 
   def index
     @comment = Comment.all
   end
 
   def new
-    @comment = Comment.new(problem_id: params[:problem_id])
+    # @comment = Comment.new(problem_id: params[:problem_id])
   end
 
   def create
-    @comment = @problem.comments.create(commentParams)
+    @comment = @problem.comments.create(comment_params)
     @comment.user_id = current_user.id
     @comment.save
 
@@ -32,7 +32,7 @@ class CommentsController < ApplicationController
   end
 
   def update
-    if @comment.update(commentParams)
+    if @comment.update(comment_params)
       flash[:success] = "Comment successfully edited"
       redirect_to @problem
     else
@@ -47,16 +47,26 @@ class CommentsController < ApplicationController
   end
 
   def find_problem
-    @problem = Problem.find(params[:problem_id])
+    begin
+      @problem = Problem.find(params[:problem_id])
+    rescue ActiveRecord::RecordNotFound => e
+      flash[:error] = "Don't have this question!"
+      redirect_to @problem
+    end
   end
 
   def find_comment
-    @comment = @problem.comments.find(params[:id])
+    begin
+      @comment = @problem.comments.find(params[:id])
+    rescue ActiveRecord::RecordNotFound => e
+      flash[:error] = "Don't have this comment!"
+      redirect_to @problem
+    end
   end
 
   def comment_owner
     unless current_user.id == @comment.user_id || current_user.admin?
-      flash[:notice] = "You can't pass!!!"
+      flash[:error] = "You don't have authorization!"
       redirect_to @problem
     end
   end
@@ -75,7 +85,7 @@ class CommentsController < ApplicationController
 
   private
 
-  def commentParams
+  def comment_params
     params.require(:comment).permit(:comment)
   end
 end
