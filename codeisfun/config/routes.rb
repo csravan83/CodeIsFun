@@ -38,7 +38,7 @@ Rails.application.routes.draw do
   get 'users/unban'
   get 'users/show'
 
-  get 'solutions/solve'
+ # get 'solutions/solve'
 
   post 'comments/create'
 end

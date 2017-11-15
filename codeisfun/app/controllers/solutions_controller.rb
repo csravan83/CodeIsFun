@@ -69,12 +69,14 @@ class SolutionsController < ApplicationController
     end
   end
 
+=begin
   def solve
     @solution = Solution.find(solution_params)
     @solution.toggle!(:solved)
     flash[:success] = "Solution is approved"
     redirect_to problems_path
   end
+=end
 
   private
     # Use callbacks to share common setup or constraints between actions.
