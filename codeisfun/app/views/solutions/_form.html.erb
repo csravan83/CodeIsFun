@@ -1,0 +1,61 @@
+<%= form_for([@problem, @problem.solutions.build]) do |form| %>
+    <% if solution.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(solution.errors.count, "error") %> prohibited this solution from being saved:</h2>
+
+          <ul>
+            <% solution.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+<!--
+    <div class="field">
+      <%= form.label :filename %>
+      <%= form.text_field :filename, id: :solution_filename %>
+    </div>
+
+    <div class="field">
+      <%= form.label :content_type %>
+      <%= form.text_field :content_type, id: :solution_content_type %>
+    </div>
+
+    <div class="field">
+      <%= form.label :file_contents %>
+      <%= form.text_field :file_contents, id: :solution_file_contents %>
+    </div>
+
+    <div class="field">
+      <%= form.label :user_id %>
+      <%= form.text_field :user_id, id: :solution_user_id %>
+    </div>
+
+    <div class="field">
+      <%= form.label :problem_id %>
+      <%= form.text_field :problem_id, id: :solution_problem_id %>
+    </div>
+-->
+
+
+   <!-- <div class="field">
+      <%= form.file_field :file %>
+    </div>
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+-->
+    <div class="form-group">
+      <%= form.label :solution, class: 'col-sm-2 control-label'  %>
+      <div class="col-sm-6">
+        <%= form.file_field :file, class: 'form-control' %>
+      </div>
+      <div class="actions">
+        <%= form.submit %>
+      </div>
+
+    </div>
+
+<% end %>
+<br>

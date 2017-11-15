@@ -1,0 +1,10 @@
+<div class="panel panel-success">
+  <div class="panel-heading ">
+    <h4>New Problem</h4>
+  </div>
+  <div class="panel-body">
+    <%= render 'form', problem: @problem %>
+
+    <%= link_to 'Back', problems_path ,class: "btn btn-default btn-small"%>
+  </div>
+</div>

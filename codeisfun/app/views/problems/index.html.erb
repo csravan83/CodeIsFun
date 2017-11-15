@@ -1,0 +1,68 @@
+<p id="notice"><%= notice %></p>
+<% if user_signed_in?%>
+    <ul class="nav navbar-nav navbar-right" >
+      <%= link_to 'Add Problem'.html_safe,new_problem_path, class: "btn btn-success btn-medium"%>
+    </ul>
+<%end%>
+
+<h1>Problems</h1>
+
+<div class="container">
+<table class="table table-striped table-hover">
+
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Input</th>
+      <th>Output</th>
+      <% if user_signed_in? and current_user.admin? %>
+        <th>Tc1</th>
+        <th>Tc2</th>
+        <th>Tc3</th>
+      <% end %>
+        <th>Status</th>
+        <th>Author</th>
+      <% if user_signed_in? and current_user.admin? %>
+        <th>Category</th>
+        <th>User ID</th>
+      <% end %>
+        <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @problems.each do |problem| %>
+      <tr>
+          <td><%= problem.id %></td>
+          <td><%= problem.title %></td>
+          <td><%= problem.description %></td>
+          <td><%= problem.input %></td>
+          <td><%= problem.output %></td>
+          <td><%= problem.TC1 %></td>
+          <td><%= problem.TC2 %></td>
+          <td><%= problem.TC3 %></td>
+          <td><%= problem.status %></td>
+          <td><%= problem.author %></td>
+        <% if user_signed_in? and current_user.admin? %>
+          <td><%= problem.category_id %></td>
+          <td><%= problem.user_id %></td>
+        <% end %>
+        <% if current_user.id == problem.user_id || current_user.admin? then%>
+            <td><%= link_to 'Show', problem , class: "btn btn-info btn-small"%></td>
+            <td><%= link_to 'Edit', edit_problem_path(problem) , class: "btn btn-warning btn-small"%></td>
+            <td><%= link_to 'Destroy', problem, method: :delete, data: { confirm: 'Are you sure?' } ,class: "btn btn-danger btn-small"%></td>
+        <% else%>
+            <td><%= link_to 'Show', problem , class: "btn btn-info btn-small"%></td>
+        <%end%>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<br>
+<%= will_paginate @problems %>
+<br>
+<%= link_to 'Back', categories_show_path ,class: "btn btn-default btn-small"%>

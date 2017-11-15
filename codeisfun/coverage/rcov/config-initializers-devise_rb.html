@@ -1,0 +1,896 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <title>config/initializers/devise.rb</title>
+    <link href="./assets/0.2.3/screen.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="./assets/0.2.3/print.css" media="print" rel="stylesheet" type="text/css" />
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <script type="text/javascript" src="./assets/0.2.3/rcov.js"></script>
+  </head>
+  <body>
+    <h1>Codeisfun C0 Coverage Information - Simploco - RCov</h1>
+    <h2>config/initializers/devise.rb</h2>
+
+    <div class="report_table_wrapper">
+      <table class='report' id='report_table'>
+        <thead>
+          <tr>
+            <th class="left_align">Name</th>
+            <th class="right_align">Total Lines</th>
+            <th class="right_align">Lines of Code</th>
+            <th class="left_align">Total Coverage</th>
+            <th class="left_align">Code Coverage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="left_align"><a href="config-initializers-devise_rb.html">config/initializers/devise.rb</a></td>
+            <td class='right_align'><tt>279</tt></td>
+            <td class='right_align'><tt>15</tt></td>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+      <div class="percent_graph">
+        <div class="covered" style="width:100px"></div>
+        <div class="uncovered" style="width:0px"></div>
+      </div></td>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+      <div class="percent_graph">
+        <div class="covered" style="width:100px"></div>
+        <div class="uncovered" style="width:0px"></div>
+      </div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Key</h3>
+
+    <div class="key"><pre><span class='marked'>Code reported as executed by Ruby looks like this...</span><span class='marked1'>and this: this line is also marked as covered.</span><span class='inferred'>Lines considered as run by rcov, but not reported by Ruby, look like this,</span><span class='inferred1'>and this: these lines were inferred by rcov (using simple heuristics).</span><span class='uncovered'>Finally, here's a line marked as not executed.</span></pre></div>
+
+    <h3>Coverage Details</h3>
+
+    <table class="details">
+      <tbody>
+        <tr class="inferred">
+          <td><pre><a name="line2">2</a> # Use this hook to configure devise mailer, warden hooks and so forth.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line3">3</a> # Many of these configuration options can be set straight in your model.</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line4">4</a> Devise.setup do |config|</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line5">5</a>   # The secret key used by Devise. Devise uses this key to generate</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line6">6</a>   # random tokens. Changing this key will render invalid all existing</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line7">7</a>   # confirmation, reset password and unlock tokens in the database.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line8">8</a>   # Devise will use the `secret_key_base` as its `secret_key`</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line9">9</a>   # by default. You can change it below and use your own secret key.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line10">10</a>   # config.secret_key = &#39;5da2f4814ef3d866b73f193df0065b2c9feb1b245024aa5d643035420cd3b78c276d76a726698db8208683341b5bd290941af2e6d2088550402e47639907e521&#39;</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line11">11</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line12">12</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line13">13</a>  config.secret_key = &#39;b65490f83c822edc8d3c1d48753125631cf0d9780df9bbb7a1fd292a94d13649d852ee154429acd19821cabdaa55e24d220e240c06cb1c56181c3cd916f98661&#39;</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line14">14</a>   # ==&gt; Mailer Configuration</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line15">15</a>   # Configure the e-mail address which will be shown in Devise::Mailer,</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line16">16</a>   # note that it will be overwritten if you use your own mailer class</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line17">17</a>   # with default &quot;from&quot; parameter.</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line18">18</a>   config.mailer_sender = &#39;please-change-me-at-config-initializers-devise@example.com&#39;</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line19">19</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line20">20</a>   # Configure the class responsible to send e-mails.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line21">21</a>   # config.mailer = &#39;Devise::Mailer&#39;</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line22">22</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line23">23</a>   # Configure the parent class responsible to send e-mails.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line24">24</a>   # config.parent_mailer = &#39;ActionMailer::Base&#39;</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line25">25</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line26">26</a>   # ==&gt; ORM configuration</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line27">27</a>   # Load and configure the ORM. Supports :active_record (default) and</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line28">28</a>   # :mongoid (bson_ext recommended) by default. Other ORMs may be</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line29">29</a>   # available as additional gems.</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line30">30</a>   require &#39;devise/orm/active_record&#39;</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line31">31</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line32">32</a>   # ==&gt; Configuration for any authentication mechanism</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line33">33</a>   # Configure which keys are used when authenticating a user. The default is</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line34">34</a>   # just :email. You can configure it to use [:username, :subdomain], so for</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line35">35</a>   # authenticating a user, both parameters are required. Remember that those</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line36">36</a>   # parameters are used only when authenticating and not when retrieving from</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line37">37</a>   # session. If you need permissions, you should implement that in a before filter.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line38">38</a>   # You can also supply a hash where the value is a boolean determining whether</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line39">39</a>   # or not authentication should be aborted when the value is not present.</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line40">40</a>   config.authentication_keys = [:username]</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line41">41</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line42">42</a>   # Configure parameters from the request object used for authentication. Each entry</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line43">43</a>   # given should be a request method and it will automatically be passed to the</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line44">44</a>   # find_for_authentication method and considered in your model lookup. For instance,</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line45">45</a>   # if you set :request_keys to [:subdomain], :subdomain will be used on authentication.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line46">46</a>   # The same considerations mentioned for authentication_keys also apply to request_keys.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line47">47</a>   # config.request_keys = []</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line48">48</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line49">49</a>   # Configure which authentication keys should be case-insensitive.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line50">50</a>   # These keys will be downcased upon creating or modifying a user and when used</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line51">51</a>   # to authenticate or find a user. Default is :email.</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line52">52</a>   config.case_insensitive_keys = [:username]</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line53">53</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line54">54</a>   # Configure which authentication keys should have whitespace stripped.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line55">55</a>   # These keys will have whitespace before and after removed upon creating or</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line56">56</a>   # modifying a user and when used to authenticate or find a user. Default is :email.</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line57">57</a>   config.strip_whitespace_keys = [:username]</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line58">58</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line59">59</a>   # Tell if authentication through request.params is enabled. True by default.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line60">60</a>   # It can be set to an array that will enable params authentication only for the</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line61">61</a>   # given strategies, for example, `config.params_authenticatable = [:database]` will</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line62">62</a>   # enable it only for database (email + password) authentication.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line63">63</a>   # config.params_authenticatable = true</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line64">64</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line65">65</a>   # Tell if authentication through HTTP Auth is enabled. False by default.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line66">66</a>   # It can be set to an array that will enable http authentication only for the</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line67">67</a>   # given strategies, for example, `config.http_authenticatable = [:database]` will</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line68">68</a>   # enable it only for database authentication. The supported strategies are:</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line69">69</a>   # :database      = Support basic authentication with authentication key + password</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line70">70</a>   # config.http_authenticatable = false</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line71">71</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line72">72</a>   # If 401 status code should be returned for AJAX requests. True by default.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line73">73</a>   # config.http_authenticatable_on_xhr = true</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line74">74</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line75">75</a>   # The realm used in Http Basic Authentication. &#39;Application&#39; by default.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line76">76</a>   # config.http_authentication_realm = &#39;Application&#39;</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line77">77</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line78">78</a>   # It will change confirmation, password recovery and other workflows</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line79">79</a>   # to behave the same regardless if the e-mail provided was right or wrong.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line80">80</a>   # Does not affect registerable.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line81">81</a>   # config.paranoid = true</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line82">82</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line83">83</a>   # By default Devise will store the user in session. You can skip storage for</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line84">84</a>   # particular strategies by setting this option.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line85">85</a>   # Notice that if you are skipping storage for all authentication paths, you</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line86">86</a>   # may want to disable generating routes to Devise&#39;s sessions controller by</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line87">87</a>   # passing skip: :sessions to `devise_for` in your config/routes.rb</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line88">88</a>   config.skip_session_storage = [:http_auth]</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line89">89</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line90">90</a>   # By default, Devise cleans up the CSRF token on authentication to</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line91">91</a>   # avoid CSRF token fixation attacks. This means that, when using AJAX</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line92">92</a>   # requests for sign in and sign up, you need to get a new CSRF token</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line93">93</a>   # from the server. You can disable this option at your own risk.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line94">94</a>   # config.clean_up_csrf_token_on_authentication = true</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line95">95</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line96">96</a>   # When false, Devise will not attempt to reload routes on eager load.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line97">97</a>   # This can reduce the time taken to boot the app but if your application</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line98">98</a>   # requires the Devise mappings to be loaded during boot time the application</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line99">99</a>   # won&#39;t boot properly.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line100">100</a>   # config.reload_routes = true</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line101">101</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line102">102</a>   # ==&gt; Configuration for :database_authenticatable</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line103">103</a>   # For bcrypt, this is the cost for hashing the password and defaults to 11. If</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line104">104</a>   # using other algorithms, it sets how many times you want the password to be hashed.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line105">105</a>   #</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line106">106</a>   # Limiting the stretches to just one in testing will increase the performance of</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line107">107</a>   # your test suite dramatically. However, it is STRONGLY RECOMMENDED to not use</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line108">108</a>   # a value less than 10 in other environments. Note that, for bcrypt (the default</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line109">109</a>   # algorithm), the cost increases exponentially with the number of stretches (e.g.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line110">110</a>   # a value of 20 is already extremely slow: approx. 60 seconds for 1 calculation).</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line111">111</a>   config.stretches = Rails.env.test? ? 1 : 11</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line112">112</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line113">113</a>   # Set up a pepper to generate the hashed password.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line114">114</a>   # config.pepper = &#39;e6cfb022fa04ac4ed4d554fc27b0d69ef9eab317aea1e95e73828308182d34c3a65c87b99f2098cfa04ffd9a017518bc9a3be9e17eeca258c42ec869ab4c7939&#39;</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line115">115</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line116">116</a>   # Send a notification to the original email when the user&#39;s email is changed.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line117">117</a>   # config.send_email_changed_notification = false</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line118">118</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line119">119</a>   # Send a notification email when the user&#39;s password is changed.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line120">120</a>   # config.send_password_change_notification = false</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line121">121</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line122">122</a>   # ==&gt; Configuration for :confirmable</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line123">123</a>   # A period that the user is allowed to access the website even without</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line124">124</a>   # confirming their account. For instance, if set to 2.days, the user will be</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line125">125</a>   # able to access the website for two days without confirming their account,</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line126">126</a>   # access will be blocked just in the third day. Default is 0.days, meaning</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line127">127</a>   # the user cannot access the website without confirming their account.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line128">128</a>   # config.allow_unconfirmed_access_for = 2.days</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line129">129</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line130">130</a>   # A period that the user is allowed to confirm their account before their</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line131">131</a>   # token becomes invalid. For example, if set to 3.days, the user can confirm</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line132">132</a>   # their account within 3 days after the mail was sent, but on the fourth day</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line133">133</a>   # their account can&#39;t be confirmed with the token any more.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line134">134</a>   # Default is nil, meaning there is no restriction on how long a user can take</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line135">135</a>   # before confirming their account.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line136">136</a>   # config.confirm_within = 3.days</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line137">137</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line138">138</a>   # If true, requires any email changes to be confirmed (exactly the same way as</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line139">139</a>   # initial account confirmation) to be applied. Requires additional unconfirmed_email</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line140">140</a>   # db field (see migrations). Until confirmed, new email is stored in</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line141">141</a>   # unconfirmed_email column, and copied to email column on successful confirmation.</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line142">142</a>   config.reconfirmable = true</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line143">143</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line144">144</a>   # Defines which key will be used when confirming an account</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line145">145</a>   # config.confirmation_keys = [:email]</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line146">146</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line147">147</a>   # ==&gt; Configuration for :rememberable</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line148">148</a>   # The time the user will be remembered without asking for credentials again.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line149">149</a>   # config.remember_for = 2.weeks</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line150">150</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line151">151</a>   # Invalidates all the remember me tokens when the user signs out.</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line152">152</a>   config.expire_all_remember_me_on_sign_out = true</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line153">153</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line154">154</a>   # If true, extends the user&#39;s remember period when remembered via cookie.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line155">155</a>   # config.extend_remember_period = false</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line156">156</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line157">157</a>   # Options to be passed to the created cookie. For instance, you can set</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line158">158</a>   # secure: true in order to force SSL only cookies.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line159">159</a>   # config.rememberable_options = {}</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line160">160</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line161">161</a>   # ==&gt; Configuration for :validatable</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line162">162</a>   # Range for password length.</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line163">163</a>   config.password_length = 6..128</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line164">164</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line165">165</a>   # Email regex used to validate email formats. It simply asserts that</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line166">166</a>   # one (and only one) @ exists in the given string. This is mainly</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line167">167</a>   # to give user feedback and not to assert the e-mail validity.</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line168">168</a>   config.email_regexp = /\A[^@\s]+@[^@\s]+\z/</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line169">169</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line170">170</a>   # ==&gt; Configuration for :timeoutable</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line171">171</a>   # The time you want to timeout the user session without activity. After this</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line172">172</a>   # time the user will be asked for credentials again. Default is 30 minutes.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line173">173</a>   # config.timeout_in = 30.minutes</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line174">174</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line175">175</a>   # ==&gt; Configuration for :lockable</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line176">176</a>   # Defines which strategy will be used to lock an account.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line177">177</a>   # :failed_attempts = Locks an account after a number of failed attempts to sign in.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line178">178</a>   # :none            = No lock strategy. You should handle locking by yourself.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line179">179</a>   # config.lock_strategy = :failed_attempts</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line180">180</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line181">181</a>   # Defines which key will be used when locking and unlocking an account</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line182">182</a>   # config.unlock_keys = [:email]</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line183">183</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line184">184</a>   # Defines which strategy will be used to unlock an account.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line185">185</a>   # :email = Sends an unlock link to the user email</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line186">186</a>   # :time  = Re-enables login after a certain amount of time (see :unlock_in below)</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line187">187</a>   # :both  = Enables both strategies</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line188">188</a>   # :none  = No unlock strategy. You should handle unlocking by yourself.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line189">189</a>   # config.unlock_strategy = :both</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line190">190</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line191">191</a>   # Number of authentication tries before locking an account if lock_strategy</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line192">192</a>   # is failed attempts.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line193">193</a>   # config.maximum_attempts = 20</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line194">194</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line195">195</a>   # Time interval to unlock the account if :time is enabled as unlock_strategy.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line196">196</a>   # config.unlock_in = 1.hour</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line197">197</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line198">198</a>   # Warn on the last attempt before the account is locked.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line199">199</a>   # config.last_attempt_warning = true</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line200">200</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line201">201</a>   # ==&gt; Configuration for :recoverable</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line202">202</a>   #</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line203">203</a>   # Defines which key will be used when recovering the password for an account</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line204">204</a>   # config.reset_password_keys = [:email]</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line205">205</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line206">206</a>   # Time interval you can reset your password with a reset password key.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line207">207</a>   # Don&#39;t put a too small interval or your users won&#39;t have the time to</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line208">208</a>   # change their passwords.</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line209">209</a>   config.reset_password_within = 6.hours</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line210">210</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line211">211</a>   # When set to false, does not sign a user in automatically after their password is</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line212">212</a>   # reset. Defaults to true, so a user is signed in automatically after a reset.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line213">213</a>   # config.sign_in_after_reset_password = true</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line214">214</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line215">215</a>   # ==&gt; Configuration for :encryptable</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line216">216</a>   # Allow you to use another hashing or encryption algorithm besides bcrypt (default).</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line217">217</a>   # You can use :sha1, :sha512 or algorithms from others authentication tools as</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line218">218</a>   # :clearance_sha1, :authlogic_sha512 (then you should set stretches above to 20</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line219">219</a>   # for default behavior) and :restful_authentication_sha1 (then you should set</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line220">220</a>   # stretches to 10, and copy REST_AUTH_SITE_KEY to pepper).</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line221">221</a>   #</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line222">222</a>   # Require the `devise-encryptable` gem when using anything other than bcrypt</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line223">223</a>   # config.encryptor = :sha512</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line224">224</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line225">225</a>   # ==&gt; Scopes configuration</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line226">226</a>   # Turn scoped views on. Before rendering &quot;sessions/new&quot;, it will first check for</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line227">227</a>   # &quot;users/sessions/new&quot;. It&#39;s turned off by default because it&#39;s slower if you</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line228">228</a>   # are using only default views.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line229">229</a>   # config.scoped_views = false</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line230">230</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line231">231</a>   # Configure the default scope given to Warden. By default it&#39;s the first</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line232">232</a>   # devise role declared in your routes (usually :user).</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line233">233</a>   # config.default_scope = :user</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line234">234</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line235">235</a>   # Set this configuration to false if you want /users/sign_out to sign out</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line236">236</a>   # only the current scope. By default, Devise signs out all scopes.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line237">237</a>   # config.sign_out_all_scopes = true</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line238">238</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line239">239</a>   # ==&gt; Navigation configuration</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line240">240</a>   # Lists the formats that should be treated as navigational. Formats like</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line241">241</a>   # :html, should redirect to the sign in page when the user does not have</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line242">242</a>   # access, but formats like :xml or :json, should return 401.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line243">243</a>   #</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line244">244</a>   # If you have any extra navigational formats, like :iphone or :mobile, you</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line245">245</a>   # should add them to the navigational formats lists.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line246">246</a>   #</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line247">247</a>   # The &quot;*/*&quot; below is required to match Internet Explorer requests.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line248">248</a>   # config.navigational_formats = [&#39;*/*&#39;, :html]</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line249">249</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line250">250</a>   # The default HTTP method used to sign out a resource. Default is :delete.</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line251">251</a>   config.sign_out_via = :delete</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line252">252</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line253">253</a>   # ==&gt; OmniAuth</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line254">254</a>   # Add a new OmniAuth provider. Check the wiki for more information on setting</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line255">255</a>   # up on your models and hooks.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line256">256</a>   # config.omniauth :github, &#39;APP_ID&#39;, &#39;APP_SECRET&#39;, scope: &#39;user,public_repo&#39;</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line257">257</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line258">258</a>   # ==&gt; Warden configuration</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line259">259</a>   # If you want to use other strategies, that are not supported by Devise, or</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line260">260</a>   # change the failure app, you can configure them inside the config.warden block.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line261">261</a>   #</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line262">262</a>   # config.warden do |manager|</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line263">263</a>   #   manager.intercept_401 = false</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line264">264</a>   #   manager.default_strategies(scope: :user).unshift :some_external_strategy</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line265">265</a>   # end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line266">266</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line267">267</a>   # ==&gt; Mountable engine configurations</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line268">268</a>   # When using Devise inside an engine, let&#39;s call it `MyEngine`, and this engine</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line269">269</a>   # is mountable, there are some extra configurations to be taken into account.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line270">270</a>   # The following options are available, assuming the engine is mounted as:</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line271">271</a>   #</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line272">272</a>   #     mount MyEngine, at: &#39;/my_engine&#39;</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line273">273</a>   #</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line274">274</a>   # The router that invoked `devise_for`, in the example above, would be:</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line275">275</a>   # config.router_name = :my_engine</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line276">276</a>   #</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line277">277</a>   # When using OmniAuth, Devise cannot automatically set OmniAuth path,</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line278">278</a>   # so you need to do it manually. For the users scope, it would be:</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line279">279</a>   # config.omniauth_path_prefix = &#39;/my_engine/users/auth&#39;</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line280">280</a> end</pre></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Generated on 2017-11-15 02:53:46 +0700 with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
+
+  </body>
+</html>
