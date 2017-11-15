@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-# merge error
-ActiveRecord::Schema.define(version: 20171113132023) do
-
-# ActiveRecord::Schema.define(version: 20171114153650) do
-
+ActiveRecord::Schema.define(version: 20171114153650) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -122,14 +118,8 @@ ActiveRecord::Schema.define(version: 20171113132023) do
   add_foreign_key "categories", "categories"
   add_foreign_key "comments", "problems"
   add_foreign_key "comments", "users"
-
-# merge error
-
   add_foreign_key "problems", "users"
-
   add_foreign_key "solutions", "problems"
   add_foreign_key "solutions", "users"
-  # merge error
   add_foreign_key "users", "roles"
-
 end

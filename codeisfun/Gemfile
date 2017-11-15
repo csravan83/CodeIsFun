@@ -53,7 +53,7 @@ gem 'paper_trail'
 gem 'jquery-rails'
 gem 'jquery-tokeninput-rails'
 gem 'best_in_place'
-gem 'will_paginate'
+
 
 
 # Use Capistrano for deployment
