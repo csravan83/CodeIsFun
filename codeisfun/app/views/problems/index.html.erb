@@ -40,11 +40,9 @@
           <td><%= problem.description %></td>
           <td><%= problem.input %></td>
           <td><%= problem.output %></td>
-        <% if user_signed_in? and current_user.admin? %>
           <td><%= problem.TC1 %></td>
           <td><%= problem.TC2 %></td>
           <td><%= problem.TC3 %></td>
-        <% end %>
           <td><%= problem.status %></td>
           <td><%= problem.author %></td>
         <% if user_signed_in? and current_user.admin? %>
