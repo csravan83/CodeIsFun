@@ -10,9 +10,11 @@ class ProblemsController < ApplicationController
 
   def index
     if params[:catid].blank?
-      @problems = Problem.paginate(per_page: 5, page: params[:page])
+      @problems = Problem.all
+      #@problems = Problem.paginate(per_page: 5, page: params[:page])
     else
-      @problems = Problem.where(category_id: params[:catid]).paginate(per_page: 5, page: params[:page])
+      @problems = Problem.where(category_id: params[:catid])
+      #@problems = Problem.where(category_id: params[:catid]).paginate(per_page: 5, page: params[:page])
     end
   end
 
