@@ -4,4 +4,7 @@ class SitesController < ApplicationController
 
   end
 
+  def admin
+
+  end
 end

@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  before_action :authenticate_user!, except: [:index]
+  before_action :authenticate_user!, except: [:index,:admin]
   before_action :update_sanitized_params, if: :devise_controller?
   before_action :banned?
   before_action :set_paper_trail_whodunnit
@@ -35,6 +35,8 @@ class ApplicationController < ActionController::Base
       root_path
     end
   end
+
+
 
 end
 

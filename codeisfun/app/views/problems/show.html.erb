@@ -66,10 +66,13 @@
 <%= link_to 'Submit Solution Here', new_problem_solution_path(@problem), class: "btn btn-primary btn-lg" %>
 
 
-
 <% if current_user.admin? %>
- <%= link_to 'All Submissions', problem_solutions_path(@problem) ,class: "btn btn-primary btn-lg" %>
+    <%= link_to 'All Submissions', problem_solutions_path(@problem) ,class: "btn btn-primary btn-lg" %>
 <% end %>
+
+
+<%= link_to 'Practice Here', "http://codepad.org/", class: "btn btn-primary btn-lg" %>
+
 
 <%= render 'comments/show'%>
 
